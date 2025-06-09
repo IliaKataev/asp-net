@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "D:\\asp net\\FirstRazorWebApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\quote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\quote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\quote.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\quote.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\quotesapi.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,18 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\quotesapi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\quotesapi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\quote.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\quote.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|d:\\asp net\\firstrazorwebapp\\webapplication2\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CF011FF-2E33-4C5D-9FFD-DA7B61DF1F07}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +46,34 @@
       "DocumentGroups": [
         {
           "DockedHeight": 247,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication2\\appsettings.json",
+              "ToolTip": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\appsettings.json",
+              "RelativeToolTip": "WebApplication2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-09T14:12:58.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Privacy.cshtml.cs",
+              "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Privacy.cshtml.cs",
+              "RelativeDocumentMoniker": "WebApplication2\\Pages\\Privacy.cshtml.cs",
+              "ToolTip": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Privacy.cshtml.cs",
+              "RelativeToolTip": "WebApplication2\\Pages\\Privacy.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T14:12:09.77Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -50,7 +88,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2\\Pages\\Privacy.cshtml",
+              "ToolTip": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "WebApplication2\\Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T14:12:07.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication2\\Pages\\Index.cshtml",
@@ -58,11 +109,12 @@
               "RelativeToolTip": "WebApplication2\\Pages\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T15:44:56.067Z"
+              "WhenOpened": "2025-06-05T15:44:56.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Quote.cshtml.cs",
               "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Quote.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplication2\\Pages\\Quote.cshtml.cs",
@@ -70,24 +122,25 @@
               "RelativeToolTip": "WebApplication2\\Pages\\Quote.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T16:00:21.423Z"
+              "WhenOpened": "2025-06-05T16:00:21.423Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Quote.cshtml",
               "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Quote.cshtml",
               "RelativeDocumentMoniker": "WebApplication2\\Pages\\Quote.cshtml",
               "ToolTip": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Quote.cshtml",
               "RelativeToolTip": "WebApplication2\\Pages\\Quote.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-05T15:58:45.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "QuotesApi.cshtml",
               "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\QuotesApi.cshtml",
               "RelativeDocumentMoniker": "WebApplication2\\Pages\\QuotesApi.cshtml",
@@ -95,11 +148,12 @@
               "RelativeToolTip": "WebApplication2\\Pages\\QuotesApi.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T16:17:41.3Z"
+              "WhenOpened": "2025-06-05T16:17:41.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "QuotesApi.cshtml.cs",
               "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\QuotesApi.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplication2\\Pages\\QuotesApi.cshtml.cs",
@@ -107,11 +161,12 @@
               "RelativeToolTip": "WebApplication2\\Pages\\QuotesApi.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T16:17:50.826Z"
+              "WhenOpened": "2025-06-05T16:17:50.826Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\asp net\\FirstRazorWebApp\\WebApplication2\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplication2\\Pages\\Index.cshtml.cs",
@@ -119,7 +174,8 @@
               "RelativeToolTip": "WebApplication2\\Pages\\Index.cshtml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T15:47:01.582Z"
+              "WhenOpened": "2025-06-05T15:47:01.582Z",
+              "EditorCaption": ""
             }
           ]
         }
