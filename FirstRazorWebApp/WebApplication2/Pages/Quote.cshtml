@@ -1,0 +1,44 @@
+﻿@page
+@model WebApplication2.Pages.QuoteModel
+@{
+    ViewData["Title"] = "Случайная цитата";
+}
+
+<div class=" container mt-5">
+    <h1 class="mb-4 text-primary">Случайная цитата</h1>
+
+    <div class="card shadow p-4">
+        <blockquote class="blockquote mb-0">
+            <p id="QuoteText">Загрузка.....</p>
+            <footer class="blockquote-footer"><cite id="quoteAuthor">...</cite></footer>
+        </blockquote>
+    </div>
+
+    <button id="refreshBtn" class="btn btn-outline-primary mt-4">Обновить цитату</button>
+
+    <div class="mt-5 text-muted">
+        Текущее время: <span id="CurrentTime"></span>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        async function loadQuote() {
+            const res = await fetch('/QuotesApi');
+            const data = await res.json();
+            document.getElementById('QuoteText').innerText = `"${data.quote}"`;
+            document.getElementById('quoteAuthor').innerText = data.author;
+        }
+
+        function updateTime(){
+            const now = new Date();
+            document.getElementById('CurrentTime').innerText = now.toLocaleTimeString();
+        }
+
+        document.getElementById("refreshBtn").addEventListener('click', loadQuote);
+
+        loadQuote();
+        updateTime();
+        setInterval(updateTime, 1000)
+    </script>
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "WebApplication2.controllers.ToDoController",
+    "Method": "Get",
+    "RelativePath": "api/ToDo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication2.controllers.ToDoController",
+    "Method": "Create",
+    "RelativePath": "api/ToDo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "WebApplication2.models.TodoItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

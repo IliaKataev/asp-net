@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>HelloWorld</p>
+    
+
+    <h1>Дата и время</h1>
+    <p>Сейчас: @Model.CurrentDateTime</p>
+
+    <h1>Сообщение из json</h1>
+    <p>Сообщение: @Model.MessageToMe</p>
+</div>
