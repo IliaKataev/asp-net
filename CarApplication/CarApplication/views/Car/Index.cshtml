@@ -1,0 +1,32 @@
+﻿@model List<CarApplication.models.Car>
+
+
+<h2>Список авто</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Цвет</th>
+            <th>Производитель</th>
+            <th>Год выпуска</th>
+            <th>Объём двигателя</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Car in Model)
+        {
+            <tr>
+                <td>@Car.Name</td>
+                <td>@Car.Color</td>
+                <td>@Car.Manufacturer</td>
+                <td>@Car.Year</td>
+                <td>@Car.EngineVolume</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Car/Create">Добавить</a> |
+<a href="/Car/SaveToFile">Сохранить в файл</a>
+<a href="/Car/LoadFromFile">Загрузить из файла</a>
