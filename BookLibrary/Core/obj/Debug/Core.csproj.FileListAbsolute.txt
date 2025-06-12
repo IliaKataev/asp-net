@@ -1,0 +1,6 @@
+D:\asp net\BookLibrary\Core\bin\Debug\Core.dll
+D:\asp net\BookLibrary\Core\bin\Debug\Core.pdb
+D:\asp net\BookLibrary\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+D:\asp net\BookLibrary\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\asp net\BookLibrary\Core\obj\Debug\Core.dll
+D:\asp net\BookLibrary\Core\obj\Debug\Core.pdb

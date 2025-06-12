@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\song\\songmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\pages\\songmodel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\pages\\songmodel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\drinkmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\drinkmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\pages\\drinkmodel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\pages\\drinkmodel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\pages\\drinkmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,12 +19,24 @@
       "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\song.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\song.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\pages\\songmodel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\pages\\songmodel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\drinkmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\drinkmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\song.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|solutionrelative:ioc_di\\song.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D34A6FA6-9BBA-4527-AF09-27CF3E752986}|IoC_DI\\IoC_DI.csproj|d:\\asp net\\ioc_di\\ioc_di\\pages\\songmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -62,20 +70,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DrinkModule.cs",
-              "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\DrinkModule.cs",
-              "RelativeDocumentMoniker": "IoC_DI\\DrinkModule.cs",
-              "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\DrinkModule.cs",
-              "RelativeToolTip": "IoC_DI\\DrinkModule.cs",
+              "DocumentIndex": 1,
+              "Title": "DrinkModel.cshtml.cs",
+              "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\DrinkModel.cshtml.cs",
+              "RelativeDocumentMoniker": "IoC_DI\\Pages\\DrinkModel.cshtml.cs",
+              "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\DrinkModel.cshtml.cs",
+              "RelativeToolTip": "IoC_DI\\Pages\\DrinkModel.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:27:08.021Z",
+              "WhenOpened": "2025-06-12T14:19:15.193Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "IoC_DI\\Pages\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "IoC_DI\\Pages\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-12T14:18:47.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DrinkModel.cshtml",
               "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\DrinkModel.cshtml",
               "RelativeDocumentMoniker": "IoC_DI\\Pages\\DrinkModel.cshtml",
@@ -88,39 +108,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SongModel.cshtml.cs",
-              "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\SongModel.cshtml.cs",
-              "RelativeDocumentMoniker": "IoC_DI\\Pages\\SongModel.cshtml.cs",
-              "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\SongModel.cshtml.cs",
-              "RelativeToolTip": "IoC_DI\\Pages\\SongModel.cshtml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA2wBAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T16:08:31.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SongModule.cs",
               "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Song\\SongModule.cs",
               "RelativeDocumentMoniker": "IoC_DI\\Song\\SongModule.cs",
               "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\Song\\SongModule.cs",
               "RelativeToolTip": "IoC_DI\\Song\\SongModule.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T16:09:45.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "DrinkModule.cs",
+              "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\DrinkModule.cs",
+              "RelativeDocumentMoniker": "IoC_DI\\DrinkModule.cs",
+              "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\DrinkModule.cs",
+              "RelativeToolTip": "IoC_DI\\DrinkModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:27:08.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Program.cs",
               "RelativeDocumentMoniker": "IoC_DI\\Program.cs",
               "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\Program.cs",
               "RelativeToolTip": "IoC_DI\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T14:11:47.422Z",
               "EditorCaption": ""
@@ -128,18 +147,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "SongModel.cshtml.cs",
+              "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\SongModel.cshtml.cs",
+              "RelativeDocumentMoniker": "IoC_DI\\Pages\\SongModel.cshtml.cs",
+              "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\SongModel.cshtml.cs",
+              "RelativeToolTip": "IoC_DI\\Pages\\SongModel.cshtml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T16:08:31.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "IoC_DI\\Pages\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "IoC_DI\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-09T16:16:00.876Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "song.txt",
               "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\song.txt",
               "RelativeDocumentMoniker": "IoC_DI\\song.txt",
@@ -151,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "IFormatter.cs",
               "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Song\\output\\IFormatter.cs",
               "RelativeDocumentMoniker": "IoC_DI\\Song\\output\\IFormatter.cs",
@@ -163,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "SongModel.cshtml",
               "DocumentMoniker": "D:\\asp net\\IoC_DI\\IoC_DI\\Pages\\SongModel.cshtml",
               "RelativeDocumentMoniker": "IoC_DI\\Pages\\SongModel.cshtml",

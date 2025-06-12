@@ -1,0 +1,29 @@
+﻿@page
+@model Library.Web.Pages.BooksModel
+
+<h2>Библиотека</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Жанр</th>
+            <th>Издательство</th>
+            <th>Год</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>
+                    <a asp-page="/Details" asp-route-id="@book.Id">@book.Title</a>
+                </td>
+                <td>@book.Author</td>
+                <td>@book.Genre</td>
+                <td>@book.Publisher</td>
+                <td>@book.Year</td>
+            </tr>
+        }
+    </tbody>
+</table>

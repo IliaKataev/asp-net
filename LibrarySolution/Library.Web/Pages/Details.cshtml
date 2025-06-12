@@ -1,0 +1,14 @@
+﻿@page "{id:int}"
+@model Library.Web.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Model.Book.Title</h1>
+
+<ul>
+    <li><strong>Автор:</strong> @Model.Book.Author</li>
+    <li><strong>Жанр:</strong> @Model.Book.Genre</li>
+    <li><strong>Издательство:</strong> @Model.Book.Publisher</li>
+    <li><strong>Год:</strong> @Model.Book.Year</li>
+</ul>

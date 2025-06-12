@@ -1,0 +1,16 @@
+D:\asp net\LibrarySolution\Library.Data\bin\Debug\net9.0\Library.Data.deps.json
+D:\asp net\LibrarySolution\Library.Data\bin\Debug\net9.0\Library.Data.dll
+D:\asp net\LibrarySolution\Library.Data\bin\Debug\net9.0\Library.Data.pdb
+D:\asp net\LibrarySolution\Library.Data\bin\Debug\net9.0\Library.Core.dll
+D:\asp net\LibrarySolution\Library.Data\bin\Debug\net9.0\Library.Core.pdb
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.csproj.AssemblyReference.cache
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.AssemblyInfoInputs.cache
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.AssemblyInfo.cs
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.csproj.CoreCompileInputs.cache
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.sourcelink.json
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library..D93EEA8C.Up2Date
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.dll
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\refint\Library.Data.dll
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\Library.Data.pdb
+D:\asp net\LibrarySolution\Library.Data\obj\Debug\net9.0\ref\Library.Data.dll

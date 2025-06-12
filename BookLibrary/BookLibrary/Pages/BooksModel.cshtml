@@ -1,0 +1,31 @@
+﻿@page
+@model BookLibrary.Pages.BooksModel
+@{
+    ViewData["Title"] = "Книги";
+}
+
+<h2>Список книг</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>ФИО автора</th>
+            <th>Жанр</th>
+            <th>Издательство</th>
+            <th>Год издания</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var book in Model.Books)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Genre</td>
+                <td>@book.Publisher</td>
+                <td>@book.Year</td>
+            </tr>
+        }
+    </tbody>
+</table>

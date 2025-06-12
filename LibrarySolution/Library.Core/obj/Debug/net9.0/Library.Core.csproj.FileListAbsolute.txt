@@ -1,0 +1,12 @@
+D:\asp net\LibrarySolution\Library.Core\bin\Debug\net9.0\Library.Core.deps.json
+D:\asp net\LibrarySolution\Library.Core\bin\Debug\net9.0\Library.Core.dll
+D:\asp net\LibrarySolution\Library.Core\bin\Debug\net9.0\Library.Core.pdb
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\Library.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\Library.Core.AssemblyInfoInputs.cache
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\Library.Core.AssemblyInfo.cs
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\Library.Core.csproj.CoreCompileInputs.cache
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\Library.Core.sourcelink.json
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\Library.Core.dll
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\refint\Library.Core.dll
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\Library.Core.pdb
+D:\asp net\LibrarySolution\Library.Core\obj\Debug\net9.0\ref\Library.Core.dll
