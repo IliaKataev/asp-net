@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 247,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,15 +78,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Book.cs",
-              "DocumentMoniker": "D:\\asp net\\LibrarySolution\\Library.Core\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "Library.Core\\Models\\Book.cs",
-              "ToolTip": "D:\\asp net\\LibrarySolution\\Library.Core\\Models\\Book.cs",
-              "RelativeToolTip": "Library.Core\\Models\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "Library.Web\\Pages\\Details.cshtml.cs",
+              "ToolTip": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\Details.cshtml.cs",
+              "RelativeToolTip": "Library.Web\\Pages\\Details.cshtml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T15:57:27.554Z",
+              "WhenOpened": "2025-06-12T16:19:07.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BooksModel.cshtml",
+              "DocumentMoniker": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\BooksModel.cshtml",
+              "RelativeDocumentMoniker": "Library.Web\\Pages\\BooksModel.cshtml",
+              "ToolTip": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\BooksModel.cshtml",
+              "RelativeToolTip": "Library.Web\\Pages\\BooksModel.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T16:01:16.667Z",
               "EditorCaption": ""
             },
             {
@@ -99,21 +111,19 @@
               "RelativeToolTip": "Library.Web\\Pages\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T16:16:26.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:16:26.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml.cs",
-              "DocumentMoniker": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\Details.cshtml.cs",
-              "RelativeDocumentMoniker": "Library.Web\\Pages\\Details.cshtml.cs",
-              "ToolTip": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\Details.cshtml.cs",
-              "RelativeToolTip": "Library.Web\\Pages\\Details.cshtml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\asp net\\LibrarySolution\\Library.Core\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Library.Core\\Models\\Book.cs",
+              "ToolTip": "D:\\asp net\\LibrarySolution\\Library.Core\\Models\\Book.cs",
+              "RelativeToolTip": "Library.Core\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T16:19:07.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T15:57:27.554Z"
             },
             {
               "$type": "Document",
@@ -125,8 +135,7 @@
               "RelativeToolTip": "Library.Web\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T16:01:48.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:01:48.979Z"
             },
             {
               "$type": "Document",
@@ -138,21 +147,7 @@
               "RelativeToolTip": "Library.Web\\Pages\\BooksModel.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T16:01:18.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BooksModel.cshtml",
-              "DocumentMoniker": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\BooksModel.cshtml",
-              "RelativeDocumentMoniker": "Library.Web\\Pages\\BooksModel.cshtml",
-              "ToolTip": "D:\\asp net\\LibrarySolution\\Library.Web\\Pages\\BooksModel.cshtml",
-              "RelativeToolTip": "Library.Web\\Pages\\BooksModel.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T16:01:16.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:01:18.347Z"
             },
             {
               "$type": "Document",
@@ -164,8 +159,7 @@
               "RelativeToolTip": "Library.Data\\Repositories\\InMemoryBookRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T16:04:00.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:04:00.171Z"
             },
             {
               "$type": "Document",
@@ -177,8 +171,7 @@
               "RelativeToolTip": "Library.Data\\Interfaces\\IBookRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T16:02:37.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:02:37.076Z"
             },
             {
               "$type": "Document",
@@ -190,8 +183,7 @@
               "RelativeToolTip": "Library.Web\\Pages\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T16:15:59.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:15:59.739Z"
             },
             {
               "$type": "Document",
@@ -203,8 +195,7 @@
               "RelativeToolTip": "Library.Web\\Pages\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T16:16:02.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:16:02.498Z"
             },
             {
               "$type": "Document",
@@ -216,8 +207,7 @@
               "RelativeToolTip": "Library.Web\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T16:16:05.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:16:05.49Z"
             },
             {
               "$type": "Document",
@@ -229,8 +219,7 @@
               "RelativeToolTip": "Library.Web\\Pages\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T16:00:36.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:00:36.181Z"
             },
             {
               "$type": "Document",
@@ -242,8 +231,7 @@
               "RelativeToolTip": "Library.Web\\Pages\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T16:10:21.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T16:10:21.5Z"
             }
           ]
         }

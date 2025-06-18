@@ -1,0 +1,15 @@
+Name: Киборг убийца
+Author: Джеймс Камерон
+Style: Триллер
+Description: Ну а что тут объяснять?
+ Seances: System.Collections.Generic.List`1[System.String]
+Name: Чебурашка
+Author: Союзмультфильм
+Style: Комедия
+Description: Популярно в новый год
+ Seances: System.Collections.Generic.List`1[System.String]
+Name: Мой сосед Тоторо
+Author: Хаяо Миядзаки
+Style: Анимация
+Description: Пупупу
+ Seances: System.Collections.Generic.List`1[System.String]

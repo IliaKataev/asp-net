@@ -1,0 +1,57 @@
+﻿@page "{style?}"
+@model Kino_Pesochnisa_16._06._25.Pages.FilmModel
+@{
+    ViewData["Title"] = "Films!";
+}
+
+<h2 class="filmList">Films List</h2>
+
+<table class="filmTable">
+    <thead class="filmHeadTable">
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Style</th>
+            <th>Desctirtion</th>
+            <th>Seances</th>
+        </tr>
+    </thead>
+    <tbody class="filmtTableBody">
+        @foreach (var Film in Model.Films)
+        {
+            <tr>
+                <td>@Film.Name</td>
+                <td>@Film.Author</td>
+                <td>@Film.Style</td>
+                <td>@Film.Description</td>
+                <td>@string.Join(", ", Film.Seances)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form method="get" class="filterForm">
+    <label>Фильтр по жанру</label>
+    <input type="text" name="style" value="@Model.Style"/>
+    <button type="submit">Фильтр</button>
+</form>
+
+<form method="post" class="addForm">
+    <input type="text" name="Name" placeholder="Название"/>
+    <input type="text" name="Author" placeholder="Автор"/>
+    <input type="text" name="Style" placeholder="Жанр" />
+    <input type="text" name="Description" placeholder="Описание" />
+    <button type="submit">Добавить</button>
+</form>
+
+<form method="post" asp-page-handler="Save">
+    <button type="submit">Сохранить</button>
+</form>
+
+<form method="post" asp-page-handler="ErrorTest">
+    <button type="submit">dsfsdf</button>
+</form>
+
+<form method="post" asp-page-handler="Redirect">
+    <button type="submit">Переадресация</button>
+</form>

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Kino_Pesochnisa_16.06.25/1.0.0": {
+        "runtime": {
+          "Kino_Pesochnisa_16.06.25.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kino_Pesochnisa_16.06.25/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
