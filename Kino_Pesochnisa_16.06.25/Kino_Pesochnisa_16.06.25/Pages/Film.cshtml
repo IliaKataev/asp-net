@@ -1,5 +1,4 @@
 ﻿@page  
-@*"{style?}"*@
 @model Kino_Pesochnisa_16._06._25.Pages.FilmModel
 @{
     ViewData["Title"] = "Films!";
@@ -7,29 +6,20 @@
 
 <h2 class="filmList">Films List</h2>
 
-<table class="filmTable">
-    <thead class="filmHeadTable">
-        <tr>
-            <th>Name</th>
-            <th>Author</th>
-            <th>Style</th>
-            <th>Desctirtion</th>
-            <th>Seances</th>
-        </tr>
-    </thead>
-    <tbody class="filmtTableBody">
-        @foreach (var Film in Model.Films)
-        {
-            <tr>
-                <td>@Film.Name</td>
-                <td>@Film.Author</td>
-                <td>@Film.Style</td>
-                <td>@Film.Description</td>
-                <td>@string.Join(", ", Film.Seances)</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var film in Model.Films)
+    {
+        <div class="col">
+            <img src="@film.ImagePath" alt="@film.Name" class="card-img-top img-fluid" />
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a asp-page="/FilmDetails" asp-route-id="@film.Id">@film.Name</a>
+                </h5>
+                <p class="card-text">Режиссер: @film.Author</p>
+            </div>
+        </div>
+    }
+</div>
 
 <form method="get" class="filterForm">
     <label>Фильтр по жанру</label>

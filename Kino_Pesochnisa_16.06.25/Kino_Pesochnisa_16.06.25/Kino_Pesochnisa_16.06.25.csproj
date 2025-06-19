@@ -7,4 +7,8 @@
     <RootNamespace>Kino_Pesochnisa_16._06._25</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="AppData\" />
+  </ItemGroup>
+
 </Project>

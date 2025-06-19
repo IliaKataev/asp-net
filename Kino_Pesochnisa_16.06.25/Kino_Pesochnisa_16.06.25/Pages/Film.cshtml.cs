@@ -9,10 +9,12 @@ namespace Kino_Pesochnisa_16._06._25.Pages
     public class FilmModel : PageModel
     {
         private readonly string path;
+        private readonly string imagePath;
 
         public FilmModel(IWebHostEnvironment webHostEnvironment)
         {
             path = Path.Combine(webHostEnvironment.ContentRootPath, "AppData", "films.json");
+            imagePath = Path.Combine(webHostEnvironment.WebRootPath, "images");
             CheckFileExist();
         }
 
@@ -84,6 +86,7 @@ namespace Kino_Pesochnisa_16._06._25.Pages
                 {
                     new IWatch
                     {
+                            Id = 0,
                             Name = "Киборг убийца",
                             Author = "Джеймс Камерон",
                             Style = "Триллер",
@@ -92,10 +95,12 @@ namespace Kino_Pesochnisa_16._06._25.Pages
                                 "10:00",
                                 "15:00",
                                 "23:47"
-                            }
+                            },
+                            ImagePath = "images/imageImage.jpg"
                      },
                     new IWatch
                     {
+                        Id = 1,
                         Name = "Чебурашка",
                         Author = "Союзмультфильм",
                         Style = "Комедия",
@@ -104,10 +109,12 @@ namespace Kino_Pesochnisa_16._06._25.Pages
                             "02:00",
                             "12:00",
                             "17:35"
-                        }
+                        },
+                        ImagePath = "images/dragonBallZ.jpg"
                     },
                     new IWatch
-                    {
+                    {   
+                        Id = 2,
                         Name = "Мой сосед Тоторо",
                         Author = "Хаяо Миядзаки",
                         Style = "Анимация",
@@ -116,11 +123,15 @@ namespace Kino_Pesochnisa_16._06._25.Pages
                             "07:00",
                             "11:21",
                             "22:17"
-                        }
+                        },
+                        ImagePath = "images/tenet.jpg"
                     }
                 };
                 SaveToFile(defaultFilms);
             }
+
+            if (!Directory.Exists(imagePath))
+                Directory.CreateDirectory(imagePath);
         }
 
         private List<IWatch> ReadFromFile()

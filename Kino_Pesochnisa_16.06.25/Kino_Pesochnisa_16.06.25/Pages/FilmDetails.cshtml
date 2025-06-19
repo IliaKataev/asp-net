@@ -1,0 +1,15 @@
+﻿@page "{id:int}"
+@model FilmDetailsModel
+@{
+    ViewData["Title"] = "О фильме";
+}
+<h1>@Model.Film.Name</h1>
+
+<img src="@Model.Film.ImagePath" class="img-fluid mb-3" alt="@Model.Film.Name" />
+
+<p><strong>Автор:</strong> @Model.Film.Author</p>
+<p><strong>Жанр: </strong> @Model.Film.Style</p>
+<p><strong>Описание: </strong> @Model.Film.Description</p>
+<p><strong>Сеансы</strong> @string.Join(", ", @Model.Film.Seances)</p>
+
+<a asp-page="Film" class="btn btn-secondary">Назад к списку</a>
