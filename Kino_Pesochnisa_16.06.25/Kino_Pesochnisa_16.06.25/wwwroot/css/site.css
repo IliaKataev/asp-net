@@ -50,3 +50,14 @@ body {
 th, td{
     padding: 15px;
 }
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    margin: 10px auto;
+    border: 4px dashed mediumpurple;
+    padding: 10px;
+    gap: 5px;
+}

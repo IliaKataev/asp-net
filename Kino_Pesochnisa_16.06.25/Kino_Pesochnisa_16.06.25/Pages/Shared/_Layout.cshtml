@@ -10,26 +10,17 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Kino_Pesochnisa_16._06._25</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Film">Film</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 w-100">
+            <div class="containter-fluid ms-3 d-flex flex-row w-100">
+                <a class="navbar-brand" asp-page="Index">Кинотеатр</a>
+                <ul class="navbar-nav me-auto d-flex flex-row w-100 justify-content-evenly">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Index">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Film">Фильмы</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -39,9 +30,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="bg-light text-center text-muted mt-4 p-3 border-top">
         <div class="container">
-            &copy; 2025 - Kino_Pesochnisa_16._06._25 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2025 - Кинотеатр в Тюмени
         </div>
     </footer>
 
