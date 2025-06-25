@@ -6,6 +6,34 @@
 
 <h2 class="filmList">Films List</h2>
 
+<form method="get" class="filterForm row g-3 mb-4">
+    <div class="col-md-3">
+        <label class="form-label">Название</label>
+        <input type="text" name="SearchName" value="@Model.SearchName" class="form-control"/>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label">Автор</label>
+        <input type="text" name="SearchAuthor" value="@Model.SearchAuthor" class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <label class="form-label">Жанр</label>
+        <select name="style" class="form-select">
+            <option value="">Все жанры</option>
+            @foreach (var genre in Model.AvailableStyles)
+            {
+                <option value="@genre" selected="@(Model.Style == genre ? "selected" : null)">
+                    @genre
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-3 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary w-100 me-3">Применить фильр</button>
+        <a asp-page="/Film" class="btn btn-outline-secondary w100">Сброс</a>
+    </div>
+</form>
+
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var film in Model.Films)
     {
@@ -21,11 +49,7 @@
     }
 </div>
 
-<form method="get" class="filterForm">
-    <label>Фильтр по жанру</label>
-    <input type="text" name="style" value="@Model.Style"/>
-    <button type="submit">Фильтр</button>
-</form>
+
 
 <form method="post" class="addForm" enctype="multipart/form-data">
     <label class="form-label">Название</label>

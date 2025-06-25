@@ -31,16 +31,34 @@ namespace Kino_Pesochnisa_16._06._25.Pages
         [BindProperty]
         public IFormFile? UploadedImage { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string? SearchName { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string? SearchAuthor { get; set; }
+
+        public List<string> AvailableStyles { get; set; } = new();
+
 
         public List<IWatch> Films { get; set; } = [];
         public void OnGet()
         {
             var films = ReadFromFile();
 
+            AvailableStyles = films
+                .Select(f => f.Style)
+                .Where(s => !string.IsNullOrWhiteSpace(s))
+                .Distinct()
+                .OrderBy(s => s)
+                .ToList();
+
             if (!string.IsNullOrEmpty(Style))
-                Films = films.Where(f => f.Style == Style).ToList();
-            else
-                Films = films;
+                films = films.Where(f => f.Style.Contains(Style, StringComparison.OrdinalIgnoreCase)).ToList();
+            if (!string.IsNullOrEmpty(SearchName))
+                films = films.Where(f => f.Name.Contains(SearchName, StringComparison.OrdinalIgnoreCase)).ToList();
+            if (!string.IsNullOrEmpty(SearchAuthor))
+                films = films.Where(f => f.Author.Contains(SearchAuthor, StringComparison.OrdinalIgnoreCase)).ToList();
+            Films = films;
         }
 
         public IActionResult OnPost()

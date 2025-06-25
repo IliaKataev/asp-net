@@ -3,20 +3,90 @@
 @{
     ViewData["Title"] = "О фильме";
 }
-<h1>@Model.Film.Name</h1>
+<h1 class="film-details-header">@Model.Film.Name</h1>
 
-<img src="@Model.Film.ImagePath" class="img-fluid mb-3" alt="@Model.Film.Name" />
+<div class="card film-card">
+    <div class="card-img film-card-image">
+        <img src="@Model.Film.ImagePath" class="img-fluid image-details" alt="@Model.Film.Name" />
+    </div>
+    <div class="card-text film-card-text">
+        <p><strong>Автор:</strong> @Model.Film.Author</p>
+        <p><strong>Жанр: </strong> @Model.Film.Style</p>
+        <p><strong>Описание: </strong> @Model.Film.Description</p>
+        <p><strong>Сеансы:</strong></p>
 
-<p><strong>Автор:</strong> @Model.Film.Author</p>
-<p><strong>Жанр: </strong> @Model.Film.Style</p>
-<p><strong>Описание: </strong> @Model.Film.Description</p>
-<p><strong>Сеансы</strong> @string.Join(", ", @Model.Film.Seances)</p>
+        <div class="d-flex flex-wrap gap-2">
+            @foreach (var time in Model.Film.Seances)
+            {
+                <div class="card text-center shadow-sm seance" style="width: 6rem; border: 2px solid; background-color: transparent">
+                    <div class="card-body p-2">
+                        <span class="fw-bold">@time</span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 
-<a asp-page="Film" class="btn btn-secondary">Назад к списку</a>
 
-<a asp-page="/EditFilm" asp-route-id="@Model.Film.Id" class="btn btn-primary">Редактировать</a>
+    <!--div class="seances">
+        <h3 class="mt-4 ms-3">Расписание на сегодня</h3>
 
-<form method="post" asp-page-handler="Delete" asp-route-id="@Model.Film.Id">
-    <!--input type="hidden" asp-for="Film.Id"/-->
-    <button type="submit" class="btn btn-danger">Удалить фильм</button>
-</form>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>Сеанс</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    /*var startHour = 8;
+                    var endHour = 23;
+                    var timeSlots = Enumerable.Range(startHour, endHour - startHour + 1)
+                                                .Select(h => TimeSpan.FromHours(h))
+                                                .ToList();
+                    var filmSeancesTimes = Model.Film.Seances
+                        .Select(s => TimeSpan.TryParse(s, out var time) ? time : (TimeSpan?)null)
+                        .Where(t => t.HasValue)
+                        .Select(t => t.Value)
+                        .ToList();
+                */
+                /*foreach (var slot in timeSlots)
+                {
+                    var seance = filmSeancesTimes.FirstOrDefault(t => t.Hours == slot.Hours && t.Minutes == slot.Minutes);
+
+                    <tr>
+                        <td>@slot.ToString(@"hh\:mm")</td>
+                        <td>
+                            @if(seance != default)
+                            {
+                                <span class="badge bg-success">Идет показ</span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">-</span>
+                            }
+                        </td>
+                    </tr>
+                */}
+            </tbody>
+        </table>
+    </div!-->
+    
+    
+</div>
+
+<div class="button-grid">
+
+    <a asp-page="Film" class="btn btn-secondary">Назад к списку</a>
+
+    <a asp-page="/EditFilm" asp-route-id="@Model.Film.Id" class="btn btn-primary">Редактировать</a>
+
+    <form method="post" asp-page-handler="Delete" asp-route-id="@Model.Film.Id">
+        <!--input type="hidden" asp-for="Film.Id"/-->
+        <button type="submit" class="btn btn-danger">Удалить фильм</button>
+    </form>
+
+</div>
+
+

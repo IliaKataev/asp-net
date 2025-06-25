@@ -47,7 +47,11 @@ body {
     border: 2px solid black;
 }
 
-th, td{
+.filterForm{
+    margin-bottom: 10px;
+}
+
+th, td {
     padding: 15px;
 }
 
@@ -59,4 +63,66 @@ th, td{
     border: 4px dashed mediumpurple;
     padding: 10px;
     gap: 5px;
+}
+
+.film-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.seance{
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.seance:hover {
+    color: rosybrown;
+}
+
+
+.film-card-image {
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rosybrown;
+}
+
+.film-card-text {
+    color: bisque;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: dimgray;
+    font-family: Bahnschrift;
+    font-size: 20px;
+    
+}
+
+.film-details-header{
+    margin: 0 0 15px 0;
+    font-family: 'Franklin Gothic';
+    padding: 10px;
+}
+
+.image-details{
+    margin: 0;
+    padding: 25px;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        ". ."
+        ". .";
 }
