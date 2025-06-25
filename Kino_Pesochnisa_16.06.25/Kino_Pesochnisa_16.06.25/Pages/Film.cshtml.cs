@@ -2,7 +2,9 @@ using Kino_Pesochnisa_16._06._25.models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net;
+using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Unicode;
 
 namespace Kino_Pesochnisa_16._06._25.Pages
 {
@@ -26,6 +28,9 @@ namespace Kino_Pesochnisa_16._06._25.Pages
         [BindProperty]
         public IWatch NewFilm { get; set; } = new();
 
+        [BindProperty]
+        public IFormFile? UploadedImage { get; set; }
+
 
         public List<IWatch> Films { get; set; } = [];
         public void OnGet()
@@ -45,6 +50,25 @@ namespace Kino_Pesochnisa_16._06._25.Pages
             if (!string.IsNullOrEmpty(NewFilm.Name))
             {
                 NewFilm.Id = films.Any() ? films.Max(f => f.Id) + 1 : 1;
+
+                if (UploadedImage != null && UploadedImage.Length > 0)
+                {
+                    var filename = $"{Guid.NewGuid()}{Path.GetExtension(UploadedImage.FileName)}";
+                    var filePath = Path.Combine(imagePath, filename);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        UploadedImage.CopyTo(stream);
+                    }
+
+                    NewFilm.ImagePath = $"/images/{filename}";
+                }
+                else
+                {
+                    NewFilm.ImagePath = $"/images/dragonBallZ.jpg";
+                }
+
+
                 films.Add(NewFilm);
                 SaveToFile(films); ///// сделать так, чтобы уже существующие фильмы не записывались повторно
 
@@ -96,7 +120,7 @@ namespace Kino_Pesochnisa_16._06._25.Pages
                                 "15:00",
                                 "23:47"
                             },
-                            ImagePath = "images/imageImage.jpg"
+                            ImagePath = "/images/imageImage.jpg"
                      },
                     new IWatch
                     {
@@ -110,7 +134,7 @@ namespace Kino_Pesochnisa_16._06._25.Pages
                             "12:00",
                             "17:35"
                         },
-                        ImagePath = "images/dragonBallZ.jpg"
+                        ImagePath = "/images/dragonBallZ.jpg"
                     },
                     new IWatch
                     {   
@@ -124,7 +148,7 @@ namespace Kino_Pesochnisa_16._06._25.Pages
                             "11:21",
                             "22:17"
                         },
-                        ImagePath = "images/tenet.jpg"
+                        ImagePath = "/images/tenet.jpg"
                     }
                 };
                 SaveToFile(defaultFilms);
@@ -136,17 +160,40 @@ namespace Kino_Pesochnisa_16._06._25.Pages
 
         private List<IWatch> ReadFromFile()
         {
+            if (!System.IO.File.Exists(path))
+                return new List<IWatch>();
+
             var json = System.IO.File.ReadAllText(path);
-            var result = JsonSerializer.Deserialize<List<IWatch>>(json);
-            return result ?? new();
+
+            if (string.IsNullOrWhiteSpace(json))
+                return new List<IWatch>();
+
+            try
+            {
+                var result = JsonSerializer.Deserialize<List<IWatch>>(json);
+                return result ?? new();
+            }
+            catch (JsonException)
+            {
+                CheckFileExist();
+                return ReadFromFile();
+            }
+
         }
+
 
         private void SaveToFile(List<IWatch> films)
         {
-            var json = JsonSerializer.Serialize(films, new JsonSerializerOptions { WriteIndented = true });
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.All)
+            };
+
+            var json = JsonSerializer.Serialize(films, options);
             System.IO.File.WriteAllText(path, json);
         }
 
-        
+
     }
 }

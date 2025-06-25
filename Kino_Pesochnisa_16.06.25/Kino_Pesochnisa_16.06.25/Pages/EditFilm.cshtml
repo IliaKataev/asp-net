@@ -1,0 +1,42 @@
+﻿@page "{id:int}"
+@model Kino_Pesochnisa_16._06._25.Pages.EditFilmModel
+@{
+    ViewData["Title"] = "Редактирование фильма";
+}
+
+<h2>Редактирование фильма</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Film.Id"/>
+    <input type="hidden" asp-for="Film.ImagePath" />
+    <div class="mb-3">
+        <label class="form-label">Название</label>
+        <input asp-for="Film.Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Автор</label>
+        <input asp-for="Film.Author" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Жанр</label>
+        <input asp-for="Film.Style" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Описание</label>
+        <input asp-for="Film.Description" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Сеансы (через запятую)</label>
+        <input asp-for="SeanceString" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Изображение</label>
+        <input type="file" name="UploadedImage" class="form-control" />
+    </div>
+
+
+    <button type="submit" class="btn-dark newFilmBtn">Добавить</button>
+    <a asp-page="/Film" class="btn btn-secondary">Назад</a>
+
+</form>

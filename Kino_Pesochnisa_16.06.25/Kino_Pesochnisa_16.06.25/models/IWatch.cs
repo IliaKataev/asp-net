@@ -9,6 +9,7 @@
         public string Description { get; set; } = string.Empty;
         public List<string> Seances { get; set; } = [];
         public string? ImagePath { get; set; } = string.Empty;
+        
 
         public override string ToString()
         {

@@ -13,3 +13,10 @@
 <p><strong>Сеансы</strong> @string.Join(", ", @Model.Film.Seances)</p>
 
 <a asp-page="Film" class="btn btn-secondary">Назад к списку</a>
+
+<a asp-page="/EditFilm" asp-route-id="@Model.Film.Id" class="btn btn-primary">Редактировать</a>
+
+<form method="post" asp-page-handler="Delete" asp-route-id="@Model.Film.Id">
+    <!--input type="hidden" asp-for="Film.Id"/-->
+    <button type="submit" class="btn btn-danger">Удалить фильм</button>
+</form>

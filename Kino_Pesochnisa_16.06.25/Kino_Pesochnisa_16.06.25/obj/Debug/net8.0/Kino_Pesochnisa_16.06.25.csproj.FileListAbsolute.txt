@@ -86,3 +86,4 @@ D:\asp net\Kino_Pesochnisa_16.06.25\Kino_Pesochnisa_16.06.25\obj\Debug\net8.0\re
 D:\asp net\Kino_Pesochnisa_16.06.25\Kino_Pesochnisa_16.06.25\obj\Debug\net8.0\Kino_Pesochnisa_16.06.25.pdb
 D:\asp net\Kino_Pesochnisa_16.06.25\Kino_Pesochnisa_16.06.25\obj\Debug\net8.0\Kino_Pesochnisa_16.06.25.genruntimeconfig.cache
 D:\asp net\Kino_Pesochnisa_16.06.25\Kino_Pesochnisa_16.06.25\obj\Debug\net8.0\ref\Kino_Pesochnisa_16.06.25.dll
+D:\asp net\Kino_Pesochnisa_16.06.25\Kino_Pesochnisa_16.06.25\bin\Debug\net8.0\AppData\films.json

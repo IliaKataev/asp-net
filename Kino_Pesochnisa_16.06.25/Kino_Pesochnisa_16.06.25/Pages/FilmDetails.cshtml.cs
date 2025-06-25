@@ -29,6 +29,42 @@ namespace Kino_Pesochnisa_16._06._25.Pages
 
             return Page();
         }
+
+        public IActionResult OnPostDelete(int id)
+        {
+            var json = System.IO.File.ReadAllText(path);
+            var films = JsonSerializer.Deserialize<List<IWatch>>(json) ?? new();
+
+            var filmToDelete = films.FirstOrDefault(f => f.Id == id);
+
+            if(filmToDelete == null)
+            {
+                return NotFound();
+            }
+
+            if (!string.IsNullOrEmpty(filmToDelete.ImagePath))
+            {
+                var fullImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", filmToDelete.ImagePath);
+                if (System.IO.File.Exists(fullImagePath))
+                {
+                    System.IO.File.Delete(fullImagePath);
+                }
+
+            }
+
+            films.Remove(filmToDelete);
+
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Encoder = System.Text.Encodings.Web.JavaScriptEncoder.Create(System.Text.Unicode.UnicodeRanges.All)
+            };
+
+            var updatedJson = JsonSerializer.Serialize(films, options);
+            System.IO.File.WriteAllText(path, updatedJson);
+
+            return RedirectToPage("/Film");
+        }
     }
 
 }

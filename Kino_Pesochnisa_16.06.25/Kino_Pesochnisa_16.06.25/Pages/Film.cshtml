@@ -27,13 +27,24 @@
     <button type="submit">Фильтр</button>
 </form>
 
-<form method="post" class="addForm">
+<form method="post" class="addForm" enctype="multipart/form-data">
     <label class="form-label">Название</label>
-    <input asp-for="NewFilm.Name" class="form-control"/>
-    <!--span asp-validation-for="NewFilm.Name" class="text-danger"></span-->
+    <input asp-for="NewFilm.Name" class="form-control" />
+
     <label class="form-label">Автор</label>
-    <input asp-for="NewFilm.Author" class="form-control"/>
-    <button type="submit" class="btn-dark">Добавить</button>
+    <input asp-for="NewFilm.Author" class="form-control" />
+
+    <label class="form-label">Жанр</label>
+    <input asp-for="NewFilm.Style" class="form-control" />
+
+    <label class="form-label">Описание</label>
+    <input asp-for="NewFilm.Description" class="form-control" />
+
+    <label class="form-label">Изображение</label>
+    <input type="file" name="UploadedImage" class="form-control" />
+
+    <button type="submit" class="btn-dark newFilmBtn">Добавить</button>
+
 </form>
 
 <!--form method="post" class="addForm">

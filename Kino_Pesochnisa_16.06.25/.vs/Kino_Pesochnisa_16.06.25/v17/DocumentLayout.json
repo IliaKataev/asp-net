@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|d:\\asp net\\kino_pesochnisa_16.06.25\\kino_pesochnisa_16.06.25\\appdata\\films.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|solutionrelative:kino_pesochnisa_16.06.25\\appdata\\films.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|d:\\asp net\\kino_pesochnisa_16.06.25\\kino_pesochnisa_16.06.25\\pages\\editfilm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|solutionrelative:kino_pesochnisa_16.06.25\\pages\\editfilm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|d:\\asp net\\kino_pesochnisa_16.06.25\\kino_pesochnisa_16.06.25\\pages\\editfilm.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|solutionrelative:kino_pesochnisa_16.06.25\\pages\\editfilm.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|d:\\asp net\\kino_pesochnisa_16.06.25\\kino_pesochnisa_16.06.25\\pages\\film.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|solutionrelative:kino_pesochnisa_16.06.25\\pages\\film.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|d:\\asp net\\kino_pesochnisa_16.06.25\\kino_pesochnisa_16.06.25\\pages\\film.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +27,8 @@
       "RelativeMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|solutionrelative:kino_pesochnisa_16.06.25\\pages\\filmdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|d:\\asp net\\kino_pesochnisa_16.06.25\\kino_pesochnisa_16.06.25\\pages\\film.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|solutionrelative:kino_pesochnisa_16.06.25\\pages\\film.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|d:\\asp net\\kino_pesochnisa_16.06.25\\kino_pesochnisa_16.06.25\\appdata\\films.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{21575580-3DA6-40E0-AD1F-AD24C58D851C}|Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25.csproj|solutionrelative:kino_pesochnisa_16.06.25\\appdata\\films.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,22 +38,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 247,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FilmDetails.cshtml",
-              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
-              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
-              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
-              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-19T14:13:28.634Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -60,54 +54,87 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "films.json",
-              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\AppData\\films.json",
-              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\AppData\\films.json",
-              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\AppData\\films.json",
-              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\AppData\\films.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-19T16:29:25.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FilmDetails.cshtml.cs",
-              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
-              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
-              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
-              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T16:09:16.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Film.cshtml.cs",
               "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml.cs",
               "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml.cs",
               "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml.cs",
               "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAkwHAAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T15:56:32.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T16:12:53.265Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "FilmDetails.cshtml.cs",
+              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
+              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
+              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
+              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T16:12:39.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Film.cshtml",
               "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml",
               "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml",
               "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml",
               "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\Film.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T15:13:25.098Z",
+              "WhenOpened": "2025-06-24T16:05:40.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FilmDetails.cshtml",
+              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
+              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
+              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
+              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\FilmDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-24T16:05:22.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "films.json",
+              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\AppData\\films.json",
+              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\AppData\\films.json",
+              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\AppData\\films.json",
+              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\AppData\\films.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-24T15:55:49.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditFilm.cshtml.cs",
+              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml.cs",
+              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml.cs",
+              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml.cs",
+              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA7wDkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T15:12:06.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditFilm.cshtml",
+              "DocumentMoniker": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml",
+              "RelativeDocumentMoniker": "Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml",
+              "ToolTip": "D:\\asp net\\Kino_Pesochnisa_16.06.25\\Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml",
+              "RelativeToolTip": "Kino_Pesochnisa_16.06.25\\Pages\\EditFilm.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-24T15:10:19.495Z",
               "EditorCaption": ""
             }
           ]
