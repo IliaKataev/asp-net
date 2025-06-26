@@ -6,7 +6,48 @@
 
 <div class="text-center">
     <h1 class="display-4">Добро пожаловать в кинотеатр</h1>
-    <a asp-page="Film" class="btn btn-primary">Выберите фильмы для просмотра</a>
+    
 </div>
 
 <!--Нужно сделать карусель на заглавной странице, чтобы фильмы подгружались из json'а. Прокручивались автоматически (попробовать с подписями)-->
+
+@if (Model.Films.Any())
+{
+    <div id="filmCarousel" class="carousel slide mx-auto mt-3 " data-bs-ride="carousel" data-bs-interval="3000" style="max-width: 400px; background-color: mediumpurple">
+        <div class="carousel-inner">
+            @for (int i = 0; i < Model.Films.Count; i++)
+            {
+                var film = Model.Films[i];
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <a asp-page="/FilmDetails" asp-route-id="@film.Id" class="text-decoration-none">
+                        <img src="@film.ImagePath" alt="@film.Name" class="d-block w-100" style="max-height: 450px; object-fit: contain" />
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>@film.Name</h5>
+                            <p>@film.Author</p>
+                        </div>
+                    </a>
+                    
+                </div>
+            }
+        </div>
+    </div>
+    <!--button class="carousel-control-prev" type="button" data-bs-target="#filmCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </!--button>
+    <button-- class="carousel-control-next" type="button" data-bs-target="#filmCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button-->
+
+    <div class="text-center mt-3">
+        <button class="btn btn-outline-secondary me-2" type="button" data-bs-target="#filmCarousel" data-bs-slide="prev">Пред.</button>
+        <button class="btn btn-outline-secondary" type="button" data-bs-target="#filmCarousel" data-bs-slide="next">След.</button>
+    </div>
+}
+else
+{
+    <p class="text-center mt-5">Нет доступных фильмов</p>
+}
+
+<div class="text-center mt-3">
+    <a asp-page="Film" class="btn btn-primary">Выберите фильмы для просмотра</a>
+</div>
