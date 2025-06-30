@@ -2,9 +2,12 @@ wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\.png
 wwwroot\images\3c4b5144-c659-4392-a256-28866041aa53.png
+wwwroot\images\7cf089b0-6df1-4bc3-a654-3115431f02b3.png
 wwwroot\images\832ece02-836c-496a-b2a1-656c655ace57.png
 wwwroot\images\a695445f-f2b5-463c-a994-1ad6efc3d095.png
 wwwroot\images\b7ac8627-33b7-4ce9-b62d-dcf8db81f07f.png
+wwwroot\images\d9c2d9b8-5157-4bf4-b698-0d6be7a92253.png
+wwwroot\images\ed2989d5-8c7b-412c-900c-0c070084a34a.png
 wwwroot\images\tenet.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kino_Pesochnisa_16.06.25")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0395c9a3cd822f25d353b0a291237cabcc341707")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5798176456b7321ee4e76e066472795fcfd6aaa8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kino_Pesochnisa_16.06.25")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kino_Pesochnisa_16.06.25")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

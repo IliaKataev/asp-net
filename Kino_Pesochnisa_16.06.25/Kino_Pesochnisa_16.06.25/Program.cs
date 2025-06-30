@@ -8,6 +8,9 @@ namespace Kino_Pesochnisa_16._06._25
 
             builder.Services.AddRazorPages();
 
+            builder.Services.Configure<RouteOptions>(options =>
+                options.ConstraintMap.Add("even", typeof(EvenConstraint)));
+
 
 
             var app = builder.Build();

@@ -1,0 +1,252 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\asp net\\CinemaTheater\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\pages\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\pages\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\wwwroot\\images\\tenet.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\wwwroot\\images\\tenet.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\pages\\showtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\pages\\showtimes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\pages\\showtimes.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\pages\\showtimes.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|d:\\asp net\\cinematheater\\cinematheater\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12B6942C-67DE-4C34-AAC2-53980F171222}|CinemaTheater\\CinemaTheater.csproj|solutionrelative:cinematheater\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 247,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "CinemaTheater\\appsettings.Development.json",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\appsettings.Development.json",
+              "RelativeToolTip": "CinemaTheater\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-30T16:13:26.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\appsettings.json",
+              "RelativeDocumentMoniker": "CinemaTheater\\appsettings.json",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\appsettings.json",
+              "RelativeToolTip": "CinemaTheater\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-30T16:01:21.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "tenet.jpg",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\wwwroot\\images\\tenet.jpg",
+              "RelativeDocumentMoniker": "CinemaTheater\\wwwroot\\images\\tenet.jpg",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\wwwroot\\images\\tenet.jpg",
+              "RelativeToolTip": "CinemaTheater\\wwwroot\\images\\tenet.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-30T15:57:37.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CinemaTheater\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CinemaTheater\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-30T15:57:22.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "CinemaTheater\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "CinemaTheater\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-30T15:57:12.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index1.cshtml",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Index1.cshtml",
+              "RelativeDocumentMoniker": "CinemaTheater\\Pages\\Index1.cshtml",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Index1.cshtml",
+              "RelativeToolTip": "CinemaTheater\\Pages\\Index1.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T15:54:56.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "CinemaTheater\\wwwroot\\css\\style.css",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "CinemaTheater\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-30T15:53:12.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "CinemaTheater\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "CinemaTheater\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T15:41:51.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CinemaTheater\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CinemaTheater\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T15:41:46.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Showtimes.cshtml.cs",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Showtimes.cshtml.cs",
+              "RelativeDocumentMoniker": "CinemaTheater\\Pages\\Showtimes.cshtml.cs",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Showtimes.cshtml.cs",
+              "RelativeToolTip": "CinemaTheater\\Pages\\Showtimes.cshtml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T15:08:29.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Showtimes.cshtml",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Showtimes.cshtml",
+              "RelativeDocumentMoniker": "CinemaTheater\\Pages\\Showtimes.cshtml",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Showtimes.cshtml",
+              "RelativeToolTip": "CinemaTheater\\Pages\\Showtimes.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T15:08:12.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "CinemaTheater\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Pages\\Index.cshtml",
+              "RelativeToolTip": "CinemaTheater\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T14:52:24.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Program.cs",
+              "RelativeDocumentMoniker": "CinemaTheater\\Program.cs",
+              "ToolTip": "D:\\asp net\\CinemaTheater\\CinemaTheater\\Program.cs",
+              "RelativeToolTip": "CinemaTheater\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wBYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T14:46:05.941Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

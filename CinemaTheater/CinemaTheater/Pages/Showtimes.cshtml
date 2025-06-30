@@ -1,0 +1,22 @@
+﻿@page "/showtimes/{cinema}/{date?}"
+@model CinemaTheater.Pages.ShowtimesModel
+@{
+}
+
+
+<h2>Кинотеатр: @Model.Cinema</h2>
+
+@if (Model.DateTime.HasValue)
+{
+    <p>Дата: @Model.DateTime.Value.ToShortTimeString()</p>
+    <ul>
+        @foreach (var movie in Model.Movies)
+        {
+            <li>@movie</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Пожалуйста, укажите дату в маршруте</p>
+}
