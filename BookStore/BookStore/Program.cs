@@ -76,6 +76,7 @@ namespace BookStore
                 context.Session.SetString("LastOrder", JsonSerializer.Serialize(order));
 
                 allOrders.Add(order);
+                
 
                 return Results.Redirect("/thanks.html");
             });
