@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>БукВорлд</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>Добро пожаловать!</h1>
+    <button onclick="loadBooks()">Показать книги</button>
+
+    <form onsubmit="makeOrder(event)">
+        <ul id="bookList">
+        </ul>
+        <button type="submit">Сделать заказ</button>
+    </form>
+
+
+    <button onclick="showLastOrder()">Показать последний заказ</button>
+
+    <button onclick="showAllOrders()">Показать все заказы</button>
+
+
+    <script src="js.js"></script>
+</body>
+</html>
