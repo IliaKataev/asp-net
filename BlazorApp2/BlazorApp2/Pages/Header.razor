@@ -1,0 +1,16 @@
+﻿@using BlazorApp2.Service
+@inject NavigationManager NavManager
+@inject CartService CartService
+
+<header class="p-3 bg-primary text-white d-flex justify-content-between align-items-center">
+    <h2 @onclick="() => NavManager.NavigateTo(path2)" style="cursor: pointer">BlazorApp2</h2>
+    <div @onclick="() => NavManager.NavigateTo(path)" style="cursor: pointer">
+        🛒 Корзина (@CartService.GetCartItems().Count)
+    </div>
+</header>
+
+@code{
+    string path = "/cart";
+    string path2 = "/";
+}
+

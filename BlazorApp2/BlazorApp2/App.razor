@@ -1,4 +1,6 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using BlazorApp2.Service
+
+<Router AppAssembly="@typeof(App).Assembly" OnNavigateAsync="OnNavigateAsync">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
@@ -10,3 +12,14 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+
+@code {
+    [Inject]
+    private CartService CartService { get; set; } = default!;
+
+    private async Task OnNavigateAsync(NavigationContext context)
+    {
+        await CartService.LoadCart();
+    }
+}

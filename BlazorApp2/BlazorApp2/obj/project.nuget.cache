@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "peO/vMHe4YU=",
+  "dgSpecHash": "2nB45LQdNWY=",
   "success": true,
   "projectFilePath": "D:\\asp net\\BlazorApp2\\BlazorApp2\\BlazorApp2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\artgl\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\artgl\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.16\\microsoft.aspnetcore.authorization.8.0.16.nupkg.sha512",
     "C:\\Users\\artgl\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.16\\microsoft.aspnetcore.components.8.0.16.nupkg.sha512",
     "C:\\Users\\artgl\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.16\\microsoft.aspnetcore.components.analyzers.8.0.16.nupkg.sha512",

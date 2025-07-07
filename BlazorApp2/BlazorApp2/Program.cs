@@ -1,6 +1,7 @@
 using BlazorApp2.Service;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Blazored.LocalStorage;
 
 namespace BlazorApp2
 {
@@ -13,7 +14,10 @@ namespace BlazorApp2
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddBlazoredLocalStorage();
             builder.Services.AddScoped<CartService>();
+            
+            
 
             await builder.Build().RunAsync();
         }

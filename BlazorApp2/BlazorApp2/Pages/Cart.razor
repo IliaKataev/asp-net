@@ -19,8 +19,11 @@ else
             </li>
         }
     </ul>
-    <button class="btn btn-danger m-3" @onclick="CartService.ClearCart">Очистить корзину</button>
+    <button class="btn btn-danger m-3" @onclick="ClearCart">Очистить корзину</button>
 }
 @code {
-
+    private async Task ClearCart()
+    {
+        await CartService.ClearCart();
+    }
 }

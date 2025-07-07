@@ -18,9 +18,9 @@
     [Parameter]
     public Product Product { get; set; } = default!;
 
-    void AddToCart()
+    async Task AddToCart()
     {
-        CartService.AddToCart(Product);
+        await CartService.AddToCart(Product);
     }
 
 }
