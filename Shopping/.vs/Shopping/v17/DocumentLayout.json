@@ -1,0 +1,236 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\asp net\\Shopping\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\shopping.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\shopping.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|d:\\asp net\\shopping\\shopping\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2148E7F0-1F9E-4617-A622-4370D6AD8594}|Shopping\\Shopping.csproj|solutionrelative:shopping\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 247,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Shopping",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Shopping.csproj",
+              "RelativeDocumentMoniker": "Shopping\\Shopping.csproj",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Shopping.csproj",
+              "RelativeToolTip": "Shopping\\Shopping.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-07T14:17:49.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Program.cs",
+              "RelativeDocumentMoniker": "Shopping\\Program.cs",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Program.cs",
+              "RelativeToolTip": "Shopping\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T14:16:20.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\Pages\\Weather.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Weather.razor",
+              "RelativeToolTip": "Shopping\\Components\\Pages\\Weather.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:16:04.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\Pages\\Home.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Shopping\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:16:00.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\Pages\\Counter.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Counter.razor",
+              "RelativeToolTip": "Shopping\\Components\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:15:56.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Error.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\Pages\\Error.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "Shopping\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:15:55.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\Routes.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\Routes.razor",
+              "RelativeToolTip": "Shopping\\Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:14:58.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\App.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\App.razor",
+              "RelativeToolTip": "Shopping\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:14:54.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\_Imports.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\_Imports.razor",
+              "RelativeToolTip": "Shopping\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:14:52.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Shopping\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:14:29.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Shopping\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Shopping\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T14:14:46.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app.css",
+              "DocumentMoniker": "D:\\asp net\\Shopping\\Shopping\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "Shopping\\wwwroot\\app.css",
+              "ToolTip": "D:\\asp net\\Shopping\\Shopping\\wwwroot\\app.css",
+              "RelativeToolTip": "Shopping\\wwwroot\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-07T14:13:35.459Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

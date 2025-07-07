@@ -1,0 +1,28 @@
+﻿@page "/"
+@using BlazorApp2.Shared;
+@using BlazorApp2.Pages;
+
+<PageTitle>Index</PageTitle>
+
+<h3 class="m-3">Товары</h3>
+
+<div class="d-flex flex-wrap">
+    @foreach (var product in products)
+    {
+        <ProductCard Product ="product"/>
+    }
+</div>
+
+
+
+
+
+@code{
+    private List<Product> products = new()
+    {
+            new Product { Id = 1, Name = "Штаны", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_1.jpeg" },
+            new Product { Id = 2, Name = "Штанцы", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_2.jpg"  },
+            new Product { Id = 3, Name = "Штаныs", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_3.jpg"  },
+    };
+}
+        

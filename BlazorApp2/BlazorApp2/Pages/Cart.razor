@@ -1,0 +1,26 @@
+﻿@page "/cart"
+@using BlazorApp2.Service;
+@inject CartService CartService
+
+<h3 class="m-3">Корзина</h3>
+
+@if (!CartService.GetCartItems().Any())
+{
+    <p class="m-3">Корзина пуста(</p>
+}
+else
+{
+    <ul class="list-group m-3">
+        @foreach (var item in CartService.GetCartItems())
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>@item.Name</span>
+                <span class="fw-bold">@item.Price.ToString()</span>
+            </li>
+        }
+    </ul>
+    <button class="btn btn-danger m-3" @onclick="CartService.ClearCart">Очистить корзину</button>
+}
+@code {
+
+}
