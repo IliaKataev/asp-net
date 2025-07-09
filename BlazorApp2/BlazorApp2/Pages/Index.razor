@@ -6,23 +6,49 @@
 
 <h3 class="m-3">Товары</h3>
 
-<div class="d-flex flex-wrap">
-    @foreach (var product in products)
-    {
-        <ProductCard Product ="product"/>
-    }
-</div>
+<CascadingValue Value=@curr>
+    <ProductSearch OnSearch="OnSearchChanged" />
+
+    <div class="d-flex flex-wrap gap-3">
+        @foreach (var product in filteredProducts)
+        {
+            <ProductCard Product="product" class="special-class" />
+        }
+    </div>
+</CascadingValue>
+
 
 
 
 
 
 @code{
+    public string curr = "₽";
+
     private List<Product> products = new()
     {
             new Product { Id = 1, Name = "Штаны", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_1.jpeg" },
             new Product { Id = 2, Name = "Штанцы", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_2.jpg"  },
             new Product { Id = 3, Name = "Штаныs", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_3.jpg"  },
     };
+
+    private List<Product> filteredProducts = new();
+
+    protected override void OnInitialized()
+    {
+        filteredProducts = new List<Product>(products);
+    }
+
+    private void OnSearchChanged(string searchText)
+    {
+        if (string.IsNullOrWhiteSpace(searchText))
+            filteredProducts = new List<Product>(products);
+        else
+        {
+            filteredProducts = products
+                .Where(p => p.Name.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+    }
 }
         

@@ -1035,6 +1035,6 @@ D:\asp net\BlazorApp2\BlazorApp2\bin\Debug\net8.0\wwwroot\_framework\Blazored.Lo
 D:\asp net\BlazorApp2\BlazorApp2\bin\Debug\net8.0\Blazored.LocalStorage.dll
 D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm
 D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\compressed\33q9zvlled-12n6dz54qr.gz
-D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\compressed\z4nfu4l7hl-02ird1o6l0.gz
-D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\compressed\6yfc49io4u-hga9h6uyeq.gz
-D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\compressed\ze7vl5o02k-ead9lrvp6q.gz
+D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\compressed\z4nfu4l7hl-z3iq332noi.gz
+D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\compressed\6yfc49io4u-zpzsn8gywh.gz
+D:\asp net\BlazorApp2\BlazorApp2\obj\Debug\net8.0\compressed\ze7vl5o02k-f1gczcitzv.gz

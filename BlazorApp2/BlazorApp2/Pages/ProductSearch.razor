@@ -1,0 +1,24 @@
+﻿
+<div class="m-3 bg-gradient d-flex flex-row">
+    <input type="text" class="form-control m-3 w-75"
+           placeholder="Search"
+           @bind="SearchText" />
+    <button class="btn btn-primary" @onclick="OnSearchChanged">🔎</button>
+
+</div>
+
+@code {
+    public string SearchText { get; set; } = string.Empty;
+
+    [Parameter]
+    public EventCallback<string> OnSearch { get; set; }
+
+
+    private async Task OnSearchChanged()
+    {
+        if (OnSearch.HasDelegate)
+        {
+            await OnSearch.InvokeAsync(SearchText);
+        }
+    }
+}

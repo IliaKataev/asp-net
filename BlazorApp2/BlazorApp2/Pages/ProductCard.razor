@@ -1,13 +1,27 @@
-﻿@using BlazorApp2.Shared;
-@using BlazorApp2.Service;
-@inject CartService CartService
+﻿@inject CartService CartService
+<head>
+    <style>
+        .special-class{
+            border: 1px solid salmon;
+            border-radius: 4px;
+        }
+    </style>
+</head>
 
-<div class="card m-2" style="width: 18rem;">
+
+<div class="card m-2 " style="width: 18rem;" @attributes="AdditionalAttributes">
     <img src="@Product.ImageUrl" class="card-img-top" alt="@Product.Name"/>
     <div class="card-body">
         <h5 class="card-title">@Product.Name</h5>
         <p class="card-text">@Product.Description</p>
-        <p class="fw-bold">@Product.Price</p>
+        <p class="fw-bold">@Product.Price @Currency</p>
+
+        <div class="mb-2">
+            <label>Количество: </label>
+            <input type="number" class="form-control" min="1" @bind="Quantity" />
+        </div>
+
+
         <button class="btn btn-primary" @onclick="AddToCart">Купить</button>
     </div>
 </div>
@@ -15,12 +29,27 @@
 
 
 @code {
+    private int Quantity { get; set; } = default!;
+
+    [CascadingParameter]
+    public string Currency { get; set; } = "₽";
+
     [Parameter]
     public Product Product { get; set; } = default!;
 
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
+
     async Task AddToCart()
     {
-        await CartService.AddToCart(Product);
+        for (int i = 0; i < Quantity; i++)
+        {
+            await CartService.AddToCart(Product);
+        }
+        
     }
 
+    //Добавить параметр, куда будут складываться атрибуты
+    //
 }
+
