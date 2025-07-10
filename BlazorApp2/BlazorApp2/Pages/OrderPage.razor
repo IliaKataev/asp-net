@@ -1,0 +1,97 @@
+﻿@page "/order"
+@using BlazorApp2.Shared
+@inject CartService CartService
+@inject NavigationManager NavigationManager
+@inject CurrencyService CurrencyService
+
+
+<h3 class="m-3">Оформление заказа</h3>
+
+<EditForm Model="@order" OnValidSubmit="HandleValidSubmit">
+    @if (order.Products.Any())
+    {
+        <h5>Ваш заказ:</h5>
+        <ul class="m-3 list-group">
+            @foreach (var product in order.Products)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>@product.Name</span>
+                    <span>@CurrencyService.ConvertPrices(@product.Price) @CurrencyService.GetCurrecy()</span>
+                </li>
+            }
+        </ul>
+
+        <div class="m-3">
+            <label class="form-label">Имя</label>
+            <InputText class="form-control" @bind-Value="order.Name"/>
+        </div>
+         <div class="m-3">
+            <label class="form-label">Телефон</label>
+            <InputText class="form-control" @bind-Value="order.Phone"/>
+        </div>
+         <div class="m-3">
+            <label class="form-label">Адрес</label>
+            <InputText class="form-control" @bind-Value="order.Address"/>
+        </div>
+
+        <button type="submit" class="btn btn-success">Оформить заказ</button>
+
+        @if(message != null)
+        {
+            <div class="alert alert-success mt-3">
+                @message
+            </div>
+
+            @if (showCountdown)
+            {
+                <div class="alert alert-info mt-3">Переход на главную страницу через @countdown секунд...</div>
+            }
+        }
+        
+    }
+    else
+    {
+        <p>Корзина пуста!</p>
+    }
+</EditForm>
+
+@code {
+    private int countdown = 5;
+    private bool showCountdown = false;
+    private System.Threading.Timer? timer;
+    private Order order = new();
+    private string? message;
+
+    protected override void OnInitialized()
+    {
+        order.Products = CartService.GetCartItems().ToList();
+    }
+
+    private void HandleValidSubmit() 
+    {
+        message = "Спасибо за заказ, " + order.Name + "!. Скоро отправим!";
+        
+
+        countdown = 5;
+        showCountdown = true;
+
+        timer = new System.Threading.Timer(UpdateCountdown, null, 1000, 1000);
+        CartService.ClearCart();
+
+    }
+
+    private void UpdateCountdown(object? state)
+    {
+        if (countdown == 1)
+        {
+            timer?.Dispose();
+            InvokeAsync(() => NavigationManager.NavigateTo("/"));
+        }
+        else
+        {
+            countdown--;
+            InvokeAsync(StateHasChanged);
+        }
+    }
+
+}

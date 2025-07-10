@@ -16,7 +16,7 @@ namespace BlazorApp2
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddBlazoredLocalStorage();
             builder.Services.AddScoped<CartService>();
-            
+            builder.Services.AddScoped<CurrencyService>();
             
 
             await builder.Build().RunAsync();

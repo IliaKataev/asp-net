@@ -1,6 +1,7 @@
 ﻿@page "/cart"
 @using BlazorApp2.Service;
 @inject CartService CartService
+@inject CurrencyService CurrencyService
 
 <h3 class="m-3">Корзина</h3>
 
@@ -15,7 +16,7 @@ else
         {
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <span>@item.Name</span>
-                <span class="fw-bold">@item.Price.ToString()</span>
+                <span class="fw-bold">@CurrencyService.ConvertPrices(item.Price) @CurrencyService.GetCurrecy()</span>
             </li>
         }
     </ul>

@@ -14,7 +14,7 @@
     <div class="card-body">
         <h5 class="card-title">@Product.Name</h5>
         <p class="card-text">@Product.Description</p>
-        <p class="fw-bold">@Product.Price @Currency</p>
+        <p class="fw-bold">@CurrencyService.ConvertPrices(Product.Price) @CurrencyService.GetCurrecy()</p>
 
         <div class="mb-2">
             <label>Количество: </label>
@@ -31,8 +31,8 @@
 @code {
     private int Quantity { get; set; } = default!;
 
-    [CascadingParameter]
-    public string Currency { get; set; } = "₽";
+    //[CascadingParameter]
+    //public string Currency { get; set; } = "₽";
 
     [Parameter]
     public Product Product { get; set; } = default!;
@@ -40,16 +40,21 @@
     [Parameter(CaptureUnmatchedValues = true)]
     public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
 
+    [Inject]
+    public CurrencyService CurrencyService { get; set; } = default!;
+
     async Task AddToCart()
     {
         for (int i = 0; i < Quantity; i++)
         {
             await CartService.AddToCart(Product);
         }
-        
+
     }
 
-    //Добавить параметр, куда будут складываться атрибуты
-    //
+    protected override void OnInitialized()
+    {
+        Console.WriteLine($"Товар загружен {Product.Name}");
+    }
 }
 

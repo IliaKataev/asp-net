@@ -1,21 +1,26 @@
 ﻿@page "/"
 @using BlazorApp2.Shared;
 @using BlazorApp2.Pages;
+@inject CurrencyService CurrencyService
 
 <PageTitle>Index</PageTitle>
 
 <h3 class="m-3">Товары</h3>
 
-<CascadingValue Value=@curr>
-    <ProductSearch OnSearch="OnSearchChanged" />
+<div class="m-3">
+    <button class="btn btn-secondary me-2" @onclick="@(() => ChangeCurrency("RUB"))">RUB</button>
+    <button class="btn btn-secondary me-2" @onclick="@(() => ChangeCurrency("USD"))">USD</button>
+    <button class="btn btn-secondary" @onclick="@(() => ChangeCurrency("EUR"))">EUR</button>
+</div>
 
-    <div class="d-flex flex-wrap gap-3">
-        @foreach (var product in filteredProducts)
-        {
-            <ProductCard Product="product" class="special-class" />
-        }
-    </div>
-</CascadingValue>
+<ProductSearch OnSearch="OnSearchChanged" />
+
+<div class="d-flex flex-wrap gap-3">
+    @foreach (var product in filteredProducts)
+    {
+        <ProductCard Product="product" class="special-class" />
+    }
+</div>
 
 
 
@@ -27,9 +32,9 @@
 
     private List<Product> products = new()
     {
-            new Product { Id = 1, Name = "Штаны", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_1.jpeg" },
+            new Product { Id = 1, Name = "Штаны", Description = "Модные крутые", Price = 5000, ImageUrl = "card-images/shani_1.jpeg" },
             new Product { Id = 2, Name = "Штанцы", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_2.jpg"  },
-            new Product { Id = 3, Name = "Штаныs", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_3.jpg"  },
+            new Product { Id = 3, Name = "Штаныs", Description = "Модные крутые", Price = 10599, ImageUrl = "card-images/shani_3.jpg"  },
     };
 
     private List<Product> filteredProducts = new();
@@ -49,6 +54,12 @@
                 .Where(p => p.Name.Contains(searchText, StringComparison.OrdinalIgnoreCase))
                 .ToList();
         }
+    }
+
+    private void ChangeCurrency(string currency)
+    {
+        CurrencyService.SetCurrency(currency);
+        StateHasChanged();
     }
 }
         
