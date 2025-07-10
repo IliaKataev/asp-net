@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Штаны",
+    "description": "Обычные",
+    "price": 5000,
+    "imageUrl": "card-images/shani_1.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Брюки",
+    "description": "Классические",
+    "price": 3599,
+    "imageUrl": "card-images/shani_2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Trousers",
+    "description": "Gorgeous",
+    "price": 10599,
+    "imageUrl": "card-images/shani_3.jpg"
+  }
+]

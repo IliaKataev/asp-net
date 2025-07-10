@@ -17,7 +17,8 @@ namespace BlazorApp2
             builder.Services.AddBlazoredLocalStorage();
             builder.Services.AddScoped<CartService>();
             builder.Services.AddScoped<CurrencyService>();
-            
+            builder.Services.AddScoped<ProductService>();
+
 
             await builder.Build().RunAsync();
         }

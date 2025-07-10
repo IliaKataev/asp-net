@@ -1,7 +1,5 @@
 ﻿@page "/"
-@using BlazorApp2.Shared;
-@using BlazorApp2.Pages;
-@inject CurrencyService CurrencyService
+
 
 <PageTitle>Index</PageTitle>
 
@@ -30,17 +28,13 @@
 @code{
     public string curr = "₽";
 
-    private List<Product> products = new()
-    {
-            new Product { Id = 1, Name = "Штаны", Description = "Модные крутые", Price = 5000, ImageUrl = "card-images/shani_1.jpeg" },
-            new Product { Id = 2, Name = "Штанцы", Description = "Модные крутые", Price = 3599, ImageUrl = "card-images/shani_2.jpg"  },
-            new Product { Id = 3, Name = "Штаныs", Description = "Модные крутые", Price = 10599, ImageUrl = "card-images/shani_3.jpg"  },
-    };
+    private List<Product> products = new();
 
     private List<Product> filteredProducts = new();
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
+        products = await ProductService.GetProductsAsync();
         filteredProducts = new List<Product>(products);
     }
 

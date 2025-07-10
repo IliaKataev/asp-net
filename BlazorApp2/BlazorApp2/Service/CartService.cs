@@ -10,6 +10,9 @@ namespace BlazorApp2.Service
         private readonly ILocalStorageService localStorage;
         private readonly string KeyStorage = "cartItems";
 
+        public event Action? OnChange;
+        private void NotifyStateChanged() => OnChange?.Invoke();
+
         public CartService(ILocalStorageService localStorage)
         {
             this.localStorage = localStorage;
@@ -20,18 +23,21 @@ namespace BlazorApp2.Service
         public async Task AddToCart(Product product)
         {
             cartItems.Add(product);
+            NotifyStateChanged();
             await SaveCart();
         }
 
         public async Task RemoveFromCart(Product product)
         {
             cartItems.Remove(product);
+            NotifyStateChanged();
             await SaveCart();
         }
 
         public async Task ClearCart()
         {
             cartItems.Clear();
+            NotifyStateChanged();
             await SaveCart();
         }
 

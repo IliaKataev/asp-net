@@ -1,7 +1,6 @@
 ﻿@page "/cart"
-@using BlazorApp2.Service;
-@inject CartService CartService
-@inject CurrencyService CurrencyService
+
+<PageTitle>Cart</PageTitle>
 
 <h3 class="m-3">Корзина</h3>
 
@@ -23,6 +22,10 @@ else
     <button class="btn btn-danger m-3" @onclick="ClearCart">Очистить корзину</button>
 }
 @code {
+
+
+
+
     private async Task ClearCart()
     {
         await CartService.ClearCart();

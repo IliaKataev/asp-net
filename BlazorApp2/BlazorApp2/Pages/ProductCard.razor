@@ -1,5 +1,4 @@
-﻿@inject CartService CartService
-<head>
+﻿<head>
     <style>
         .special-class{
             border: 1px solid salmon;
@@ -29,7 +28,7 @@
 
 
 @code {
-    private int Quantity { get; set; } = default!;
+    private int Quantity { get; set; } = 1;
 
     //[CascadingParameter]
     //public string Currency { get; set; } = "₽";
@@ -40,8 +39,6 @@
     [Parameter(CaptureUnmatchedValues = true)]
     public Dictionary<string, object> AdditionalAttributes { get; set; } = new();
 
-    [Inject]
-    public CurrencyService CurrencyService { get; set; } = default!;
 
     async Task AddToCart()
     {
