@@ -1,0 +1,10 @@
+﻿@page "/tasks"
+
+<a href="/add-task">Добавить задачу</a>
+
+@code {
+    private List<TaskModel> tasks = new()
+    {
+        new TaskModel {Id = 1, Title = "Finish To Do List", DueDate= DateTime.Today},
+    };
+}
