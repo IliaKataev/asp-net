@@ -1,10 +1,34 @@
 ﻿@page "/tasks"
 
+<h3>Список задач</h3>
+
 <a href="/add-task">Добавить задачу</a>
 
+@if(tasks.Count == 0)
+{
+    <p>Нет задач</p>
+}
+else
+{
+    <ul>
+        @foreach (var task in tasks)
+        {
+            <li>
+                <strong>@task.Title</strong> -  @task.DueDate.ToShortDateString()
+                [<a href="/task/@task.Id">Подробнее</a>]
+            </li>
+        }
+    </ul>
+}
+
 @code {
-    private List<TaskModel> tasks = new()
+
+    public static List<TaskModel> tasks = new()
     {
-        new TaskModel {Id = 1, Title = "Finish To Do List", DueDate= DateTime.Today},
+        new TaskModel {Title = "Finish To Do List", DueDate= DateTime.Today},
+        new TaskModel {Title = "Finish To Do List", DueDate= DateTime.Today},
+        new TaskModel {Title = "Finish To Do List", DueDate= DateTime.Today},
     };
+
+
 }

@@ -1030,6 +1030,6 @@ D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.dll
 D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\refint\ToDoList.dll
 D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\ToDoList.pdb
 D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\ref\ToDoList.dll
-D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\compressed\gv394d2p3q-38yhrsnun6.gz
-D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\compressed\wiuxzgns6k-6zsbwvv8iz.gz
-D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\compressed\eub24h1al5-5kspvl9j9a.gz
+D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\compressed\gv394d2p3q-r4a61bqmse.gz
+D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\compressed\wiuxzgns6k-0mm4mvrwuo.gz
+D:\asp net\ToDoList\ToDoList\obj\Debug\net8.0\compressed\eub24h1al5-rew0lzf7ho.gz

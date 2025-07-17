@@ -1,8 +1,35 @@
 ﻿@page "/add-task"
+@using ToDoList.Model
+@inject NavigationManager Navigation
 <h3>AddTask</h3>
+
+<EditForm Model="@newerTask" OnValidSubmit="HandleValidInput">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Заголовок:</label><br />
+        <InputText @bind-Value="newerTask.Title" class="form-input" />
+        <ValidationMessage For="@(() => newerTask.Title)" />
+    </div>
+
+    <div>
+        <label>Срок:</label><br />
+        <InputDate @bind-Value="newerTask.DueDate" class="form-input" />
+        <ValidationMessage For="@(() => newerTask.DueDate)" />
+    </div>
+
+    <button type="submit">Сохранить задачу</button>
+</EditForm>
+
 
 <a href="/tasks">Вернуться к списку задач</a>
 
 @code {
-
+    TaskModel newerTask = new();
+    void HandleValidInput()
+    {
+        Tasks.tasks.Add(newerTask);
+        Navigation.NavigateTo("/tasks");
+    }
 }
