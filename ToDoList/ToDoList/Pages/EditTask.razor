@@ -1,0 +1,59 @@
+﻿@page "/edit-task/{Id:guid}"
+@using ToDoList.Model;
+@inject IJSRuntime JS;
+@inject NavigationManager NV;
+
+@if(taskToEdit == null)
+{
+    <p>Задача не найдена</p>
+}
+else
+{
+    <EditForm Model="@taskToEdit" OnValidSubmit="HandleValidEdit">
+        <DataAnnotationsValidator />
+        <!--<ValidationSummary />-->
+
+        <div>
+            <label>Заголовок:</label><br />
+            <InputText @bind-Value="taskToEdit.Title" class="form-input" />
+            <ValidationMessage For="@(() => taskToEdit.Title)" />
+        </div>
+
+        <div>
+            <label>Срок:</label><br />
+            <InputDate @bind-Value="taskToEdit.DueDate" class="form-input" />
+            <ValidationMessage For="@(() => taskToEdit.DueDate)" />
+        </div>
+        <div>
+            <label>Приоритет:</label><br />
+            <InputSelect @bind-Value="taskToEdit.Priority" class="form-input">
+                @foreach (var p in Enum.GetValues<TaskPriority>())
+                {
+                    <option value="@p">@p</option>
+                }
+            </InputSelect>
+        </div>
+
+        <button type="submit">Сохранить задачу</button>
+        <a href="/tasks">Отмена</a>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public Guid Id { get; set; }
+    private TaskModel taskToEdit;
+
+    protected override void OnInitialized()
+    {
+        taskToEdit = Tasks.tasks.FirstOrDefault(t => t.Id == Id);
+    }
+
+    private async Task HandleValidEdit()
+    {
+        var json = System.Text.Json.JsonSerializer.Serialize(Tasks.tasks);
+        await JS.InvokeVoidAsync("localStorage.setItem", "tasks", json);
+
+        NV.NavigateTo("/tasks");
+    }
+}

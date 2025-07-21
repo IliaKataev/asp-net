@@ -1,4 +1,5 @@
 ﻿@page "/tasks"
+@inject IJSRuntime JS
 
 <h3>Список задач</h3>
 
@@ -13,34 +14,57 @@ else
     <ul>
         @foreach (var task in tasks)
         {
-            <li>
-                <strong>@task.Title</strong> -  @task.DueDate.ToShortDateString() 
+            <li style="color:@GetPriorityColor(task.Priority)">
+                <strong style="text-decoration:@(task.IsCompleted ? "line-through" : "none")">@task.Title</strong> -  @task.DueDate.ToShortDateString() 
+                <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()"/>
                 <!--отдельный компонент для одной задачи-->
                 [<a href="/task/@task.Id">Подробнее</a>]
+                [<a href="/edit-task/@task.Id">Редактировать</a>]
                 <button @onclick="() => DeleteTask(task.Id)">Удалить</button>
             </li>
         }
     </ul>
 }
 
+
 @code {
     public static List<TaskModel> tasks = new();
 
-    [Inject] private IJSRuntime JS { get; set; }
+    // public static IJSRuntime JSRuntime { get; set; }
+
+    // [Inject] public IJSRuntime InjectedJS
+    // {
+    //     get => JS;
+    //     set
+    //     {
+    //         JS = value;
+    //         JSRuntime = value;
+    //     }
+    // }
+
     [Inject] private HttpClient Http { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        
+        var localData = await JS.InvokeAsync<string>("localStorage.getItem", "tasks");
+
+        if (!string.IsNullOrEmpty(localData) && localData != "[]")
+        {
+            tasks = System.Text.Json.JsonSerializer.Deserialize<List<TaskModel>>(localData);
+        }
+        else
+        {
             var json = await Http.GetStringAsync("sample-data/tasks.json");
             tasks = System.Text.Json.JsonSerializer.Deserialize<List<TaskModel>>(json);
 
+            await SaveTasksAsync();
+        }
     }
 
-    public static async Task SaveTasksAsync(IJSRuntime js)
+    public async Task SaveTasksAsync()
     {
         var json = System.Text.Json.JsonSerializer.Serialize(tasks);
-        await js.InvokeVoidAsync("localStorage.setItem", "tasks", json);
+        await JS.InvokeVoidAsync("localStorage.setItem", "tasks", json);
     }
 
     private async Task DeleteTask(Guid id)
@@ -49,8 +73,27 @@ else
         if(taskToDelete != null)
         {
             tasks.Remove(taskToDelete);
-            await SaveTasksAsync(JS);
+            await SaveTasksAsync();
         }
+    }
+
+    // private async Task ResetToJson()
+    // {
+    //     var json = await Http.GetStringAsync("sample-data/tasks.json");
+    //     tasks = System.Text.Json.JsonSerializer.Deserialize<List<TaskModel>>(json);
+
+    //     await SaveTasksAsync();
+    // }
+
+    private string GetPriorityColor(TaskPriority priority)
+    {
+        return priority switch
+        {
+            TaskPriority.Low => "green",
+            TaskPriority.Medium => "goldenrod",
+            TaskPriority.High => "red",
+            _ => "black"
+        };
     }
 
 }

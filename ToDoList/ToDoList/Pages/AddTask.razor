@@ -6,7 +6,6 @@
 
 <EditForm Model="@newerTask" OnValidSubmit="HandleValidInput">
     <DataAnnotationsValidator />
-    <ValidationSummary />
 
     <div>
         <label>Заголовок:</label><br />
@@ -20,6 +19,17 @@
         <ValidationMessage For="@(() => newerTask.DueDate)" />
     </div>
 
+    <div>
+        <label>Приоритет:</label><br />
+        <InputSelect @bind-Value="newerTask.Priority" class="form-input">
+            @foreach(var p in Enum.GetValues<TaskPriority>())
+            {
+                <option value="@p">@p</option>
+            }
+        </InputSelect>
+        <ValidationMessage For="@(() => newerTask.Priority)" />
+    </div>
+
     <button type="submit">Сохранить задачу</button>
 </EditForm>
 
@@ -31,7 +41,10 @@
     async Task HandleValidInput()
     {
         Tasks.tasks.Add(newerTask);
-        await Tasks.SaveTasksAsync(JS);
+
+        var json = System.Text.Json.JsonSerializer.Serialize(Tasks.tasks);
+        await JS.InvokeVoidAsync("localStorage.setItem", "tasks", json);
+
         Navigation.NavigateTo("/tasks");
     }
 }
