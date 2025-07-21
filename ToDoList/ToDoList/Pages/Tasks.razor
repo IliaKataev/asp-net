@@ -1,9 +1,13 @@
 ﻿@page "/tasks"
 @inject IJSRuntime JS
 
-<h3>Список задач</h3>
+<div class="tasks-header-add">
+    <h3 class="tasks-header">Список задач</h3>
 
-<a href="/add-task">Добавить задачу</a>
+    <a class="btn btn-primary" href="/add-task">Добавить задачу</a>
+</div>
+
+
 
 @if(tasks.Count == 0)
 {
@@ -11,16 +15,23 @@
 }
 else
 {
-    <ul>
+    <ul class="p-3 task-list">
         @foreach (var task in tasks)
         {
-            <li style="color:@GetPriorityColor(task.Priority)">
-                <strong style="text-decoration:@(task.IsCompleted ? "line-through" : "none")">@task.Title</strong> -  @task.DueDate.ToShortDateString() 
-                <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()"/>
+            <li class="task-item" style="color:@GetPriorityColor(task.Priority);">
+                <div class="main-text">
+                    <div>
+                        <strong style="text-decoration:@(task.IsCompleted ? "line-through" : "none")">@task.Title</strong> -  @task.DueDate.ToShortDateString()
+                    </div>
+                    <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()" />
+                </div>
+               <div class="main-buttons">
+                    <a class="btn btn-secondary button-task-list" href="/task/@task.Id">Подробнее</a>
+                    <a class="btn btn-secondary button-task-list" href="/edit-task/@task.Id">Редактировать</a>
+                    <button class="btn btn-secondary button-task-list" @onclick="() => DeleteTask(task.Id)">Удалить</button>
+               </div>
                 <!--отдельный компонент для одной задачи-->
-                [<a href="/task/@task.Id">Подробнее</a>]
-                [<a href="/edit-task/@task.Id">Редактировать</a>]
-                <button @onclick="() => DeleteTask(task.Id)">Удалить</button>
+                
             </li>
         }
     </ul>
