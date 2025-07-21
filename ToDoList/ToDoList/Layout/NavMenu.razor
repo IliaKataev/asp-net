@@ -1,34 +1,27 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">ToDoList</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+﻿
+<nav>
+    <div class="navbar">
+        <div class="container nav-containter">
+            <input class="checkbox" type="checkbox" id="menu-toggle"/>
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
+            <div class="logo">
+                <h1>ToDoList</h1>
+            </div>
+
+            <ul class="menu-items">
+                <li> <NavLink href="/tasks" Match="NavLinkMatch.All">Задачи</NavLink></li>
+                <li> <NavLink href="/add-task">Добавить</NavLink></li>
+            </ul>
+
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="tasks">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Задачи
-            </NavLink>
-        </div>
-    </nav>
-</div>
+    </div>
+</nav>
 
 @code {
-    private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
 }

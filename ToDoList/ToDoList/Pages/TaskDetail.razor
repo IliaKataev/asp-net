@@ -1,8 +1,29 @@
-﻿@page "/task/{TaskId:int?}"
+﻿@page "/task/{TaskId:guid}"
 
-<h3>TaskDetail</h3>
+<h3>Детали задачи</h3>
+
+@if(task is null)
+{
+    <p>Задача не найдена</p>
+    <!-- сделать авто редирект через 10 секунд + опция вернуться назад по кнопке-->
+}
+else
+{
+    <div>
+        <p><strong>Название: </strong> @task.Title</p>
+        <p><strong>Срок: </strong> @task.DueDate.ToShortDateString()</p>
+    </div>
+    <a href="/tasks">Назад</a>
+}
 
 @code {
     [Parameter]
-    public int TaskId { get; set; }
+    public Guid TaskId { get; set; }
+
+    private TaskModel? task { get; set; }
+
+    protected override void OnInitialized()
+    {
+        task = Tasks.tasks.FirstOrDefault(t => t.Id == TaskId);
+    }
 }

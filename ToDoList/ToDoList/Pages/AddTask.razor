@@ -1,6 +1,7 @@
 ﻿@page "/add-task"
 @using ToDoList.Model
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
 <h3>AddTask</h3>
 
 <EditForm Model="@newerTask" OnValidSubmit="HandleValidInput">
@@ -27,9 +28,10 @@
 
 @code {
     TaskModel newerTask = new();
-    void HandleValidInput()
+    async Task HandleValidInput()
     {
         Tasks.tasks.Add(newerTask);
+        await Tasks.SaveTasksAsync(JS);
         Navigation.NavigateTo("/tasks");
     }
 }

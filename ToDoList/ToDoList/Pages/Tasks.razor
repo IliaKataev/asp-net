@@ -14,21 +14,43 @@ else
         @foreach (var task in tasks)
         {
             <li>
-                <strong>@task.Title</strong> -  @task.DueDate.ToShortDateString()
+                <strong>@task.Title</strong> -  @task.DueDate.ToShortDateString() 
+                <!--отдельный компонент для одной задачи-->
                 [<a href="/task/@task.Id">Подробнее</a>]
+                <button @onclick="() => DeleteTask(task.Id)">Удалить</button>
             </li>
         }
     </ul>
 }
 
 @code {
+    public static List<TaskModel> tasks = new();
 
-    public static List<TaskModel> tasks = new()
+    [Inject] private IJSRuntime JS { get; set; }
+    [Inject] private HttpClient Http { get; set; }
+
+    protected override async Task OnInitializedAsync()
     {
-        new TaskModel {Title = "Finish To Do List", DueDate= DateTime.Today},
-        new TaskModel {Title = "Finish To Do List", DueDate= DateTime.Today},
-        new TaskModel {Title = "Finish To Do List", DueDate= DateTime.Today},
-    };
+        
+            var json = await Http.GetStringAsync("sample-data/tasks.json");
+            tasks = System.Text.Json.JsonSerializer.Deserialize<List<TaskModel>>(json);
 
+    }
+
+    public static async Task SaveTasksAsync(IJSRuntime js)
+    {
+        var json = System.Text.Json.JsonSerializer.Serialize(tasks);
+        await js.InvokeVoidAsync("localStorage.setItem", "tasks", json);
+    }
+
+    private async Task DeleteTask(Guid id)
+    {
+        var taskToDelete = tasks.FirstOrDefault(t => t.Id == id);
+        if(taskToDelete != null)
+        {
+            tasks.Remove(taskToDelete);
+            await SaveTasksAsync(JS);
+        }
+    }
 
 }
