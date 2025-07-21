@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\asp net\\ToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\wwwroot\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\wwwroot\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\pages\\tasks.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\pages\\tasks.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\wwwroot\\sample-data\\tasks.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\wwwroot\\sample-data\\tasks.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\wwwroot\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\wwwroot\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\wwwroot\\sample-data\\weather.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\model\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\model\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\pages\\tasks.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\pages\\tasks.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\asp net\\todolist\\todolist\\pages\\addtask.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,25 +86,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "weather.json",
-              "DocumentMoniker": "D:\\asp net\\ToDoList\\ToDoList\\wwwroot\\sample-data\\weather.json",
-              "RelativeDocumentMoniker": "ToDoList\\wwwroot\\sample-data\\weather.json",
-              "ToolTip": "D:\\asp net\\ToDoList\\ToDoList\\wwwroot\\sample-data\\weather.json",
-              "RelativeToolTip": "ToDoList\\wwwroot\\sample-data\\weather.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-17T15:13:07.029Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "tasks.json",
               "DocumentMoniker": "D:\\asp net\\ToDoList\\ToDoList\\wwwroot\\sample-data\\tasks.json",
               "RelativeDocumentMoniker": "ToDoList\\wwwroot\\sample-data\\tasks.json",
               "ToolTip": "D:\\asp net\\ToDoList\\ToDoList\\wwwroot\\sample-data\\tasks.json",
               "RelativeToolTip": "ToDoList\\wwwroot\\sample-data\\tasks.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-17T16:20:09.089Z"
             },
@@ -134,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TextFile.txt",
               "DocumentMoniker": "D:\\asp net\\ToDoList\\ToDoList\\wwwroot\\TextFile.txt",
               "RelativeDocumentMoniker": "ToDoList\\wwwroot\\TextFile.txt",
@@ -142,8 +130,7 @@
               "RelativeToolTip": "ToDoList\\wwwroot\\TextFile.txt",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-07-16T16:00:56.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-16T16:00:56.622Z"
             },
             {
               "$type": "Document",
@@ -243,19 +230,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Tasks.razor",
               "DocumentMoniker": "D:\\asp net\\ToDoList\\ToDoList\\Pages\\Tasks.razor",
               "RelativeDocumentMoniker": "ToDoList\\Pages\\Tasks.razor",
               "ToolTip": "D:\\asp net\\ToDoList\\ToDoList\\Pages\\Tasks.razor",
               "RelativeToolTip": "ToDoList\\Pages\\Tasks.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowCcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-16T15:12:11.625Z"
+              "WhenOpened": "2025-07-16T15:12:11.625Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "weather.json",
+              "DocumentMoniker": "D:\\asp net\\ToDoList\\ToDoList\\wwwroot\\sample-data\\weather.json",
+              "RelativeDocumentMoniker": "ToDoList\\wwwroot\\sample-data\\weather.json",
+              "ToolTip": "D:\\asp net\\ToDoList\\ToDoList\\wwwroot\\sample-data\\weather.json",
+              "RelativeToolTip": "ToDoList\\wwwroot\\sample-data\\weather.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-17T15:13:07.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TaskModel.cs",
               "DocumentMoniker": "D:\\asp net\\ToDoList\\ToDoList\\Model\\TaskModel.cs",
               "RelativeDocumentMoniker": "ToDoList\\Model\\TaskModel.cs",
