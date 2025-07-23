@@ -7,6 +7,21 @@
     <a class="btn btn-primary" href="/add-task">Добавить задачу</a>
 </div>
 
+<div class="sort-panel">
+    <div class="sorting">
+        <label for="sortOption">Сортировка:</label>
+        <select id="sortOption" @onchange="OnSortChanged">
+            <option value="default">По умолчанию</option>
+            <option value="priority">По важности</option>
+            <option value="date">По дате</option>
+            <option value="title">По алфавиту</option>
+        </select>
+    </div>
+
+
+    <button class="btn-primary" @onclick="InvertSortOrder">Инверсия</button>
+</div>
+
 
 
 @if(tasks.Count == 0)
@@ -21,7 +36,7 @@ else
             <li class="task-item" style="color:@GetPriorityColor(task.Priority);">
                 <div class="main-text">
                     <div>
-                        <strong style="text-decoration:@(task.IsCompleted ? "line-through" : "none")">@task.Title</strong> -  @task.DueDate.ToShortDateString()
+                        <span style="text-decoration:@(task.IsCompleted ? "line-through" : "none")"><strong>@task.Title</strong> -  @task.DueDate.ToShortDateString()</span>
                     </div>
                     <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()" />
                 </div>
@@ -29,9 +44,7 @@ else
                     <a class="btn btn-secondary button-task-list" href="/task/@task.Id">Подробнее</a>
                     <a class="btn btn-secondary button-task-list" href="/edit-task/@task.Id">Редактировать</a>
                     <button class="btn btn-secondary button-task-list" @onclick="() => DeleteTask(task.Id)">Удалить</button>
-               </div>
-                <!--отдельный компонент для одной задачи-->
-                
+               </div>                
             </li>
         }
     </ul>
@@ -40,18 +53,6 @@ else
 
 @code {
     public static List<TaskModel> tasks = new();
-
-    // public static IJSRuntime JSRuntime { get; set; }
-
-    // [Inject] public IJSRuntime InjectedJS
-    // {
-    //     get => JS;
-    //     set
-    //     {
-    //         JS = value;
-    //         JSRuntime = value;
-    //     }
-    // }
 
     [Inject] private HttpClient Http { get; set; }
 
@@ -70,6 +71,8 @@ else
 
             await SaveTasksAsync();
         }
+
+        ApplySorting();
     }
 
     public async Task SaveTasksAsync()
@@ -88,13 +91,6 @@ else
         }
     }
 
-    // private async Task ResetToJson()
-    // {
-    //     var json = await Http.GetStringAsync("sample-data/tasks.json");
-    //     tasks = System.Text.Json.JsonSerializer.Deserialize<List<TaskModel>>(json);
-
-    //     await SaveTasksAsync();
-    // }
 
     private string GetPriorityColor(TaskPriority priority)
     {
@@ -105,6 +101,46 @@ else
             TaskPriority.High => "red",
             _ => "black"
         };
+    }
+
+    //-------------------------------------------------------------
+
+    private string currentSort = "default";
+    private bool isSortReversed = false;
+
+    private void OnSortChanged(ChangeEventArgs e)
+    {
+        currentSort = e.Value.ToString();
+        ApplySorting();
+    }
+
+    private void InvertSortOrder()
+    {
+        isSortReversed = !isSortReversed;
+        ApplySorting();
+    }
+
+    private void ApplySorting()
+    {
+        switch (currentSort)
+        {
+            case "priority":
+                tasks = tasks.OrderBy(t => t.Priority).ToList();
+                break;
+            case "date":
+                tasks = tasks.OrderBy(t => t.DueDate).ToList();
+                break;
+            case "title":
+                tasks = tasks.OrderBy(t => t.Title).ToList();
+                break;
+            default:
+                break;
+        }
+
+        if (isSortReversed)
+        {
+            tasks.Reverse();
+        }
     }
 
 }

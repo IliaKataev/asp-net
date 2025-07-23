@@ -13,15 +13,10 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-/* Боковая панель */
-.sidebar {
-    background-color: #8A784E;
-    color: #E7EFC7;
-    width: 100%;
-    padding: 15px 10px;
-}
+
 
 /* Верхняя панель */
 .top-row {
@@ -34,6 +29,7 @@ main {
     font-size: 1.5rem;
     font-weight: bold;
     border-bottom: 2px solid #8A784E;
+    width: 100%;
 }
 
 /* Заголовок приложения */
@@ -51,22 +47,4 @@ main {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Desktop режим */
-@media (min-width: 641px) {
-    .page {
-        flex-direction: row;
-    }
 
-    .sidebar {
-        width: 220px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-        padding-top: 20px;
-    }
-
-    .top-row {
-        border-bottom: none;
-        border-left: 2px solid #8A784E;
-    }
-}

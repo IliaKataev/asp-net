@@ -18,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    padding: 0 16px;
 }
 
 .btn-primary {
@@ -86,3 +87,29 @@
         background-color: #3B3B1A;
         color: #E7EFC7;
     }
+
+.sort-panel{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.sorting{
+    width:100%;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align:center;
+}
+
+select {
+    border: 2px solid #8A784E;
+    border-radius: 10px;
+}
+
+select::picker(select) {
+    border: none;
+}

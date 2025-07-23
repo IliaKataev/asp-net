@@ -2,39 +2,44 @@
 @using ToDoList.Model
 @inject NavigationManager Navigation
 @inject IJSRuntime JS
-<h3>AddTask</h3>
+<h3 class="add-header">AddTask</h3>
 
-<EditForm Model="@newerTask" OnValidSubmit="HandleValidInput">
+<EditForm Model="@newerTask" OnValidSubmit="HandleValidInput" >
     <DataAnnotationsValidator />
+    <div id="add-form">
+        <div class="task-item">
+            <label>Заголовок:</label>
+            <InputText @bind-Value="newerTask.Title" class="form-input" />
+            <ValidationMessage For="@(() => newerTask.Title)" />
+        </div>
 
-    <div>
-        <label>Заголовок:</label><br />
-        <InputText @bind-Value="newerTask.Title" class="form-input" />
-        <ValidationMessage For="@(() => newerTask.Title)" />
+        <div class="task-item">
+            <label>Срок:</label>
+            <InputDate @bind-Value="newerTask.DueDate" class="form-input" />
+            <ValidationMessage For="@(() => newerTask.DueDate)" />
+        </div>
+
+        <div class="task-item">
+            <label>Приоритет:</label>
+            <InputSelect @bind-Value="newerTask.Priority" class="form-input">
+                @foreach (var p in Enum.GetValues<TaskPriority>())
+                {
+                    <option value="@p">@p</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => newerTask.Priority)" />
+        </div>
+        <div class="link-and-button">
+            <a class="go-back-link" href="/tasks"></a>
+            <button class="button-task-list" type="submit">Сохранить задачу</button>
+        </div>
+        
     </div>
-
-    <div>
-        <label>Срок:</label><br />
-        <InputDate @bind-Value="newerTask.DueDate" class="form-input" />
-        <ValidationMessage For="@(() => newerTask.DueDate)" />
-    </div>
-
-    <div>
-        <label>Приоритет:</label><br />
-        <InputSelect @bind-Value="newerTask.Priority" class="form-input">
-            @foreach(var p in Enum.GetValues<TaskPriority>())
-            {
-                <option value="@p">@p</option>
-            }
-        </InputSelect>
-        <ValidationMessage For="@(() => newerTask.Priority)" />
-    </div>
-
-    <button type="submit">Сохранить задачу</button>
+    
 </EditForm>
 
 
-<a href="/tasks">Вернуться к списку задач</a>
+
 
 @code {
     TaskModel newerTask = new();

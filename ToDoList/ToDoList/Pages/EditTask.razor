@@ -12,30 +12,32 @@ else
     <EditForm Model="@taskToEdit" OnValidSubmit="HandleValidEdit">
         <DataAnnotationsValidator />
         <!--<ValidationSummary />-->
+        <div id ="edit-form">
+            <div class="task-item">
+                <label>Заголовок:</label>
+                <InputText @bind-Value="taskToEdit.Title" class="form-input" />
+                <ValidationMessage For="@(() => taskToEdit.Title)" />
+            </div>
 
-        <div>
-            <label>Заголовок:</label><br />
-            <InputText @bind-Value="taskToEdit.Title" class="form-input" />
-            <ValidationMessage For="@(() => taskToEdit.Title)" />
-        </div>
+            <div class="task-item">
+                <label>Срок:</label>
+                <InputDate @bind-Value="taskToEdit.DueDate" class="form-input" />
+                <ValidationMessage For="@(() => taskToEdit.DueDate)" />
+            </div>
+            <div class="task-item">
+                <label>Приоритет:</label>
+                <InputSelect @bind-Value="taskToEdit.Priority" class="form-input">
+                    @foreach (var p in Enum.GetValues<TaskPriority>())
+                    {
+                        <option value="@p">@p</option>
+                    }
+                </InputSelect>
+            </div>
 
-        <div>
-            <label>Срок:</label><br />
-            <InputDate @bind-Value="taskToEdit.DueDate" class="form-input" />
-            <ValidationMessage For="@(() => taskToEdit.DueDate)" />
+            <button class="button-task-list" type="submit">Сохранить задачу</button>
+            <a class="btn btn-primary button-task-list" style="background-color: #3B3B1A;" href="/tasks">Отмена</a>
         </div>
-        <div>
-            <label>Приоритет:</label><br />
-            <InputSelect @bind-Value="taskToEdit.Priority" class="form-input">
-                @foreach (var p in Enum.GetValues<TaskPriority>())
-                {
-                    <option value="@p">@p</option>
-                }
-            </InputSelect>
-        </div>
-
-        <button type="submit">Сохранить задачу</button>
-        <a href="/tasks">Отмена</a>
+        
     </EditForm>
 }
 
