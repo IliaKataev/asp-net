@@ -1,4 +1,4 @@
-﻿@page "/tasks"
+﻿@page "/tasks1"
 @inject IJSRuntime JS
 
 <div class="tasks-header-add">
@@ -39,9 +39,9 @@
     <input type="date" @onchange="OnDateChange" />
 
     <form @onsubmit="OnQuerySubmit">
-        <input placeholder="..." @bind="searchQuery" @bind:event="oninput"/>
+        <input placeholder="..." @bind="searchQuery" @bind:event="oninput" />
     </form>
-    
+
 
 
 
@@ -51,30 +51,31 @@
 
 
 
-@if(tasks.Count == 0)
+@if (tasks.Count == 0)
 {
     <p>Нет задач</p>
 }
 else
 {
-    <ul class="p-3 task-list">
-        @foreach (var task in tasks)
-        {
-            <li class="task-item" style="color:@GetPriorityColor(task.Priority);">
+    <Dropzone TItem="TaskModel"
+        Items="tasks"
+        OnItemDropped="HandleDrop">
+        <ItemTemplate Context="task">
+            <div class="task-item" style="color:@GetPriorityColor(task.Priority);">
                 <div class="main-text">
                     <div>
                         <span style="text-decoration:@(task.IsCompleted ? "line-through" : "none")"><strong>@task.Title</strong> -  @task.DueDate.ToShortDateString()</span>
                     </div>
                     <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()" />
                 </div>
-               <div class="main-buttons">
+                <div class="main-buttons">
                     <a class="btn btn-secondary button-task-list" href="/task/@task.Id">Подробнее</a>
                     <a class="btn btn-secondary button-task-list" href="/edit-task/@task.Id">Редактировать</a>
                     <button class="btn btn-secondary button-task-list" @onclick="() => DeleteTask(task.Id)">Удалить</button>
-               </div>                
-            </li>
-        }
-    </ul>
+                </div>
+            </div>
+        </ItemTemplate>
+    </Dropzone>
 }
 
 
@@ -111,7 +112,7 @@ else
     private async Task DeleteTask(Guid id)
     {
         var taskToDelete = tasksAll.FirstOrDefault(t => t.Id == id);
-        if(taskToDelete != null)
+        if (taskToDelete != null)
         {
             tasks.Remove(taskToDelete);
             await SaveTasksAsync();
@@ -194,7 +195,7 @@ else
 
     private void OnDateChange(ChangeEventArgs e)
     {
-        if(DateTime.TryParse(e.Value?.ToString(), out var parsedDate))
+        if (DateTime.TryParse(e.Value?.ToString(), out var parsedDate))
         {
             dateFilter = parsedDate;
         }
@@ -261,6 +262,14 @@ else
         dateFilter = null;
         searchQuery = "";
         ApplyFilters();
+    }
+
+    // ----------------------------------------------------
+    private void HandleDrop(TaskModel droppedTask) // сделать перемещение по индексу
+    {
+        tasks.Remove(droppedTask);
+        tasks.Add(droppedTask);
+        SaveTasksAsync();
     }
 
 

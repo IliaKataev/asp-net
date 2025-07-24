@@ -1,0 +1,39 @@
+﻿@typeparam TItem
+
+<div @ondrop="OnDrop" @ondragover="OnDragOver" class="dropzone" >
+    @foreach (var item in Items)
+    {
+        <div draggable="true"
+            @ondragstart="() => OnDragStart(item)"
+            class="dropzone-item">
+            @ItemTemplate(item);
+        </div>
+    }
+</div>
+
+
+@code {
+    [Parameter]
+    public List<TItem> Items { get; set; }
+    [Inject]
+    private DragService<TItem> DragService { get; set; }
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+    [Parameter]
+    public EventCallback<TItem> OnItemDropped { get; set; }
+    [Parameter]     
+    public RenderFragment<TItem> ItemTemplate { get; set; }
+
+    private void OnDragStart(TItem item)
+    {
+        DragService.DraggedItem = item;
+    }
+
+    private async Task OnDrop()
+    {
+        await OnItemDropped.InvokeAsync(DragService.DraggedItem);
+    }
+
+    private async Task OnDragOver(DragEventArgs e) => await JSRuntime.InvokeVoidAsync("preventDefaultDrag",e);
+
+}

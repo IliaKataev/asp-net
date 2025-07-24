@@ -1,0 +1,115 @@
+﻿body {
+    background-color: #AEC8A4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #3B3B1A;
+}
+
+.tasks-header {
+    color: #3B3B1A;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tasks-header-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 16px;
+}
+
+.btn-primary {
+    background-color: #8A784E;
+    color: #E7EFC7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #3B3B1A;
+        color: #E7EFC7;
+    }
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.task-item {
+    background-color: #E7EFC7;
+    border: 2px solid #8A784E;
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 2px 2px 8px rgba(59, 59, 26, 0.3);
+}
+
+.main-text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.main-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.button-task-list {
+    padding: 5px 10px;
+    background-color: #8A784E;
+    color: #E7EFC7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .button-task-list:hover {
+        background-color: #3B3B1A;
+        color: #E7EFC7;
+    }
+
+.sort-panel {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.sorting {
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+select {
+    border: 2px solid #8A784E;
+    border-radius: 10px;
+}
+
+    select::picker(select) {
+        border: none;
+    }
