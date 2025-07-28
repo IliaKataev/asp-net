@@ -1,11 +1,10 @@
 ﻿@page "/task/{TaskId:guid}"
-
+@using ToDoList.Services
 <h3>Детали задачи</h3>
 
 @if(task is null)
 {
     <p>Задача не найдена</p>
-    <!-- сделать авто редирект через 10 секунд + опция вернуться назад по кнопке-->
 }
 else
 {
@@ -19,11 +18,14 @@ else
 @code {
     [Parameter]
     public Guid TaskId { get; set; }
+    [Inject]
+    private TaskService TaskService { get; set; }
+
 
     private TaskModel? task { get; set; }
 
     protected override void OnInitialized()
     {
-        task = Tasks.tasks.FirstOrDefault(t => t.Id == TaskId);
+        task = TaskService.AllTasks.FirstOrDefault(t => t.Id == TaskId);
     }
 }

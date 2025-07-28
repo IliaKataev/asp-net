@@ -1,6 +1,7 @@
 ﻿@page "/edit-task/{Id:guid}"
 @using ToDoList.Model;
 @inject IJSRuntime JS;
+@using ToDoList.Services
 @inject NavigationManager NV;
 
 @if(taskToEdit == null)
@@ -44,17 +45,22 @@ else
 @code {
     [Parameter]
     public Guid Id { get; set; }
+    [Inject]
+    private TaskService TaskService { get; set; }
+    [Inject]
+    private HttpClient http { get; set; }
     private TaskModel taskToEdit;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        taskToEdit = Tasks.tasks.FirstOrDefault(t => t.Id == Id);
+        await TaskService.LoadAsync(http, JS);
+        taskToEdit = TaskService.AllTasks.FirstOrDefault(t => t.Id == Id);
     }
 
     private async Task HandleValidEdit()
     {
-        var json = System.Text.Json.JsonSerializer.Serialize(Tasks.tasks);
-        await JS.InvokeVoidAsync("localStorage.setItem", "tasks", json);
+        await TaskService.SaveAsync(JS);
+        TaskService.ApplyFilter();
 
         NV.NavigateTo("/tasks");
     }

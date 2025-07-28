@@ -1,4 +1,5 @@
 ﻿@page "/tasks"
+@using ToDoList.Services
 @inject IJSRuntime JS
 
 <div class="tasks-header-add">
@@ -51,14 +52,14 @@
 
 
 
-@if(tasks.Count == 0)
+@if(TaskService.FilteredTasks.Count == 0)
 {
     <p>Нет задач</p>
 }
 else
 {
     <ul class="p-3 task-list">
-        @foreach (var task in tasks)
+        @foreach (var task in TaskService.FilteredTasks)
         {
             <li class="task-item" style="color:@GetPriorityColor(task.Priority);">
                 <div class="main-text">
@@ -79,44 +80,27 @@ else
 
 
 @code {
-    public static List<TaskModel> tasks = new();
+    private string searchQuery = "";
+
+    [Inject]
+    private TaskService TaskService { get; set; }
 
     [Inject] private HttpClient Http { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        var localData = await JS.InvokeAsync<string>("localStorage.getItem", "tasks");
-
-        if (!string.IsNullOrEmpty(localData) && localData != "[]")
-        {
-            tasksAll = System.Text.Json.JsonSerializer.Deserialize<List<TaskModel>>(localData);
-        }
-        else
-        {
-            var json = await Http.GetStringAsync("sample-data/tasks.json");
-            tasksAll = System.Text.Json.JsonSerializer.Deserialize<List<TaskModel>>(json);
-
-            await SaveTasksAsync();
-        }
-
-        ApplyFilters();
+        await TaskService.LoadAsync(Http, JS);
     }
 
     public async Task SaveTasksAsync()
     {
-        var json = System.Text.Json.JsonSerializer.Serialize(tasksAll);
-        await JS.InvokeVoidAsync("localStorage.setItem", "tasks", json);
+        await TaskService.SaveAsync(JS);
     }
 
     private async Task DeleteTask(Guid id)
     {
-        var taskToDelete = tasksAll.FirstOrDefault(t => t.Id == id);
-        if(taskToDelete != null)
-        {
-            tasks.Remove(taskToDelete);
-            await SaveTasksAsync();
-            ApplyFilters();
-        }
+        TaskService.DeleteAsync(id);
+        await TaskService.SaveAsync(JS);
     }
 
 
@@ -133,134 +117,67 @@ else
 
     // Сортировка-------------------------------------------------------------
 
-    private string currentSort = "default";
-    private bool isSortReversed = false;
+
 
     private void OnSortChanged(ChangeEventArgs e)
     {
-        currentSort = e.Value.ToString();
-        ApplySorting();
+        TaskService.SetSortOption(e.Value.ToString());
+        TaskService.ApplySorting();
     }
 
     private void InvertSortOrder()
     {
-        isSortReversed = !isSortReversed;
-        ApplySorting();
+        TaskService.ToggleSortOrder();
+        TaskService.ApplySorting();
     }
 
-    private void ApplySorting()
-    {
-        switch (currentSort)
-        {
-            case "priority":
-                tasks = tasks.OrderBy(t => t.Priority).ToList();
-                break;
-            case "date":
-                tasks = tasks.OrderBy(t => t.DueDate).ToList();
-                break;
-            case "title":
-                tasks = tasks.OrderBy(t => t.Title).ToList();
-                break;
-            default:
-                break;
-        }
-
-        if (isSortReversed)
-        {
-            tasks.Reverse();
-        }
-    }
 
     // Фильтр-------------------------------------------------------------
 
-    private string statusFilter = "";
-    private string priorityFilter = "";
-    private DateTime? dateFilter = null;
-    private string searchQuery = "";
-
-    private List<TaskModel> tasksAll = new();
 
     private void OnStatusChanged(ChangeEventArgs e)
     {
-        statusFilter = e.Value?.ToString();
-        ApplyFilters();
+        TaskService.SetStatusFilter(e.Value?.ToString() ?? "");
+        TaskService.ApplyFilter();
     }
 
     private void OnPriorityChanged(ChangeEventArgs e)
     {
-        priorityFilter = e.Value?.ToString();
-        ApplyFilters();
+        TaskService.SetPriorityFilter(e.Value?.ToString() ?? "");
+        TaskService.ApplyFilter();
     }
 
     private void OnDateChange(ChangeEventArgs e)
     {
         if(DateTime.TryParse(e.Value?.ToString(), out var parsedDate))
         {
-            dateFilter = parsedDate;
+            TaskService.SetDateFilter(parsedDate);
         }
         else
         {
-            dateFilter = null;
+            TaskService.SetDateFilter(null);
         }
 
-        ApplyFilters();
+        TaskService.ApplyFilter();
     }
 
     private void OnQuerySubmit()
     {
-        ApplyFilters();
+        TaskService.SetSearchQuery(searchQuery);
+        TaskService.ApplyFilter();
     }
 
-    private void ApplyFilters()
-    {
-        IEnumerable<TaskModel> filtered = tasksAll;
-
-        if (!string.IsNullOrEmpty(statusFilter))
-        {
-            filtered = filtered.Where(t => (string.IsNullOrEmpty(statusFilter) || t.IsCompleted.ToString().ToLower() == statusFilter.ToLower()));
-        }
-
-        if (!string.IsNullOrEmpty(priorityFilter))
-        {
-            filtered = filtered.Where(t => t.Priority.ToString() == priorityFilter);
-        }
-
-        if (dateFilter.HasValue)
-        {
-            filtered = filtered.Where(t => t.DueDate.Date == dateFilter.Value.Date);
-        }
-
-        if (!string.IsNullOrWhiteSpace(searchQuery))
-        {
-            filtered = filtered.Where(t => t.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
-        }
-
-        // filtered = tasksAll
-        //     .Where(
-        //         t => (string.IsNullOrEmpty(statusFilter) || t.IsCompleted.ToString().ToLower() == statusFilter.ToLower()) &&
-        //     (string.IsNullOrEmpty(priorityFilter) || t.Priority.ToString() == priorityFilter) &&
-        //     (!dateFilter.HasValue || t.DueDate.Date == dateFilter.Value.Date) &&
-        //     (string.IsNullOrWhiteSpace(searchQuery) || t.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
-        //     )
-        // .ToList();
-
-        // foreach (var task in tasksAll)
-        // {
-        //     Console.WriteLine(task.Title);
-        // }
-
-        tasks = filtered.ToList();
-
-        ApplySorting();
-    }
 
     private void ClearFilters()
     {
-        statusFilter = "";
-        priorityFilter = "";
-        dateFilter = null;
-        searchQuery = "";
-        ApplyFilters();
+        TaskService.SetStatusFilter("");
+        TaskService.SetPriorityFilter("");
+        TaskService.SetDateFilter(null);
+        TaskService.SetSearchQuery("");
+        TaskService.SetSortOption("");
+        TaskService.ToggleSortOrder();
+        TaskService.ApplyFilter();
+        
     }
 
 

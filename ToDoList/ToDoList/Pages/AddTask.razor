@@ -2,6 +2,7 @@
 @using ToDoList.Model
 @inject NavigationManager Navigation
 @inject IJSRuntime JS
+@using ToDoList.Services
 <h3 class="add-header">AddTask</h3>
 
 <EditForm Model="@newerTask" OnValidSubmit="HandleValidInput" >
@@ -42,13 +43,14 @@
 
 
 @code {
+    [Inject]
+    private TaskService TaskService { get; set; }
     TaskModel newerTask = new();
     async Task HandleValidInput()
     {
-        Tasks.tasks.Add(newerTask);
+        TaskService.AddTask(newerTask);
 
-        var json = System.Text.Json.JsonSerializer.Serialize(Tasks.tasks);
-        await JS.InvokeVoidAsync("localStorage.setItem", "tasks", json);
+        TaskService.SaveAsync(JS);
 
         Navigation.NavigateTo("/tasks");
     }
