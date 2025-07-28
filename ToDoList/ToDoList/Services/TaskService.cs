@@ -109,12 +109,17 @@ namespace ToDoList.Services
                     FilteredTasks = FilteredTasks.OrderBy(t => t.Title).ToList();
                     break;
                 default:
-                    break;
+                    FilteredTasks = FilteredTasks.OrderBy(t => t.Id).ToList();
+                        break;
             }
+
+            Console.WriteLine(isSortReversed.ToString());
 
             if (isSortReversed)
             {
+                Console.WriteLine(isSortReversed.ToString());
                 FilteredTasks.Reverse();
+                
             }
         }
     }

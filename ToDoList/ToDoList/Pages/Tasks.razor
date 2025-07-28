@@ -12,7 +12,7 @@
     <div class="sorting">
         <label for="sortOption">Сортировка:</label>
         <select id="sortOption" @onchange="OnSortChanged">
-            <option value="default">По умолчанию</option>
+            <option value="">По умолчанию</option>
             <option value="priority">По важности</option>
             <option value="date">По дате</option>
             <option value="title">По алфавиту</option>
@@ -42,12 +42,8 @@
     <form @onsubmit="OnQuerySubmit">
         <input placeholder="..." @bind="searchQuery" @bind:event="oninput"/>
     </form>
-    
-
-
 
     <button @onclick="ClearFilters">Сбросить фильтры</button>
-
 </div>
 
 
@@ -80,12 +76,46 @@ else
 
 
 @code {
+
+    // private void OnFilterChanged()
+    // {
+    //     ApplyFilters();
+    // }
+
+
     private string searchQuery = "";
+
+    // private string selectedFilter
+    // {
+    //     get => _selectedFilter;
+    //     set
+    //     {
+    //         if(_selectedFilter != value)
+    //         {
+    //             _selectedFilter = value;
+    //             TaskService.ApplyFilter();
+    //         }
+    //     }
+    // }
+
+    private string selectedFilter = "";
+    // private Dictionary<string, string> Filters = new()
+    //     {
+    //         ["Priority"] = "",
+    //         ["Status"] = "",
+    //         ["Data"] = null,
+    //     };
 
     [Inject]
     private TaskService TaskService { get; set; }
 
     [Inject] private HttpClient Http { get; set; }
+
+    // private void ApplyFilters()
+    // {
+    //     var statuc = Filters["Status"];
+    //     TaskService.SetStatusFilter(statuc);
+    // }
 
     protected override async Task OnInitializedAsync()
     {
@@ -128,7 +158,7 @@ else
     private void InvertSortOrder()
     {
         TaskService.ToggleSortOrder();
-        TaskService.ApplySorting();
+        TaskService.ApplyFilter();
     }
 
 
@@ -170,12 +200,13 @@ else
 
     private void ClearFilters()
     {
+        selectedFilter = "";
         TaskService.SetStatusFilter("");
         TaskService.SetPriorityFilter("");
         TaskService.SetDateFilter(null);
         TaskService.SetSearchQuery("");
         TaskService.SetSortOption("");
-        TaskService.ToggleSortOrder();
+        //TaskService.ToggleSortOrder();
         TaskService.ApplyFilter();
         
     }
