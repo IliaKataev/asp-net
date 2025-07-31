@@ -3,6 +3,7 @@
 @inject IJSRuntime JS;
 @using ToDoList.Services
 @inject NavigationManager NV;
+@inject HttpClient http;
 
 @if(taskToEdit == null)
 {
@@ -36,13 +37,14 @@ else
             </div>
             <div class="task-item">
                 <label>Категория</label>
-                <InputSelect @bind-Value="taskToEdit.Tag" class="form-select">
+                <InputSelect @bind-Value="SelectedTagId" class="form-select">
                     <option value="">Выберите:</option>
-                    <option value="Работа">Работа</option>
-                    <option value="Учеба">Учеба</option>
-                    <option value="Личное">Личное</option>
+                    @foreach (var tag in AllTags)
+                    {
+                        <option value="@tag.Id">@tag.Name</option>
+                    }
                 </InputSelect>
-                <!--button type="button" class="button-task-list" @onclick="">Добавить тег</button-->
+                <button type="button" class="button-task-list" @onclick="ShowTagPopup">Добавить тег</button>
             </div>
 
             <button class="button-task-list" type="submit">Сохранить задачу</button>
@@ -50,8 +52,26 @@ else
         </div>
         
     </EditForm>
-
     
+    
+}
+@if (showTagPopup)
+{
+    <div class="modal-fullscreen-overlay">
+        <div class="modal-fullscreen-content">
+            <h3 class="text-lg-center mb-2">Новый тег</h3>
+            <div class="d-flex flex-column gap-2">
+                <input type="color" @bind="newTagColor" class="modal-fullscreen-lg-down h-10 mb-2 cursor-pointer color-picker" />
+                <input type="text" @bind="newTagName" class="border rounded modal-fullscreen-lg-down mb-2 p-1" placeholder="Название" />
+            </div>
+
+
+            <div>
+                <button class="px-3 py-1 rounded button-task-list bg-black" @onclick="() => showTagPopup = false">Отмена</button>
+                <button class="px-3 py-1 rounded button-task-list bg-black" @onclick="AddTag">Добавить</button>
+            </div>
+        </div>
+    </div>
 }
 
 @code {
@@ -59,9 +79,12 @@ else
     public Guid Id { get; set; }
     [Inject]
     private TaskService TaskService { get; set; }
-    [Inject]
-    private HttpClient http { get; set; }
     private TaskModel taskToEdit;
+    private Guid SelectedTagId;
+    private bool showTagPopup = false;
+    private string newTagName = "";
+    private string newTagColor = "#8d7c55";
+    private List<Tag> AllTags => TaskService.AllTags;
 
 
 
@@ -69,14 +92,41 @@ else
     {
         await TaskService.LoadAsync(http, JS);
         taskToEdit = TaskService.AllTasks.FirstOrDefault(t => t.Id == Id);
+
+        if(taskToEdit?.Tag != null)
+        {
+            SelectedTagId = taskToEdit.Tag.Id;
+        }
     }
 
     private async Task HandleValidEdit()
     {
+        taskToEdit.Tag = TaskService.AllTags.FirstOrDefault(t => t.Id == SelectedTagId);
         await TaskService.SaveAsync(JS);
         TaskService.ApplyFilter();
 
         NV.NavigateTo("/tasks");
+    }
+
+    private void ShowTagPopup()
+    {
+        showTagPopup = true;
+        newTagColor = "#8d7c55";
+        newTagName = "";
+    }
+
+    private async Task AddTag()
+    {
+        if (!string.IsNullOrWhiteSpace(newTagName))
+        {
+            var newTag = new Tag { Id = Guid.NewGuid(), Name = newTagName.Trim(), Color = newTagColor };
+            TaskService.AddTag(newTag);
+            SelectedTagId = newTag.Id;
+
+            await TaskService.SaveTagsAsync(JS);
+
+            showTagPopup = false;
+        }
     }
 
 }

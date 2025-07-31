@@ -1,4 +1,5 @@
 ﻿using Microsoft.JSInterop;
+using System.Text.Json;
 using System.Threading.Tasks;
 using ToDoList.Model;
 using ToDoList.Pages;
@@ -11,13 +12,52 @@ namespace ToDoList.Services
         public List<TaskModel> AllTasks { get; set; } = new();
         public List<TaskModel> FilteredTasks { get; private set; } = new();
 
+        public List<Tag> AllTags { get; set; } = new();
+
         private string currentSort = "default";
         private bool isSortReversed = false;
         private string statusFilter = "";
         private string priorityFilter = "";
         private DateTime? dateFilter = null;
         private string searchQuery = "";
+        /// <summary>
+        
+        public async Task SaveTagsAsync(IJSRuntime JS)
+        {
+            var json = System.Text.Json.JsonSerializer.Serialize(AllTags);
+            await JS.InvokeVoidAsync("localStorage.setItem", "tags", json);
+        }
 
+        public async Task LoadTagsAsync(HttpClient http, IJSRuntime JS)
+        {
+            var tagsJson = await JS.InvokeAsync<string>("localStorage.getItem", "tags");
+
+            if (!string.IsNullOrEmpty(tagsJson))
+            {
+                AllTags = JsonSerializer.Deserialize<List<Tag>>(tagsJson);
+            }
+            else
+            {
+                AllTags = new List<Tag>()
+                {
+                    new Tag { Name = "Работа", Color = "blue"},
+                    new Tag { Name = "Личное", Color = "purple"},
+                    new Tag { Name = "Учеба", Color = "green"}
+                };
+
+                await SaveTagsAsync(JS);
+            }
+        }
+
+        public void AddTag(Tag tag)
+        {
+            if (!AllTags.Any(t => t.Name.Equals(tag.Name, StringComparison.OrdinalIgnoreCase)))
+            {
+                AllTags.Add(tag);
+            }
+        }
+
+        /// 
         public async Task SaveAsync(IJSRuntime JS)
         {
             var json = System.Text.Json.JsonSerializer.Serialize(AllTasks);
@@ -39,6 +79,8 @@ namespace ToDoList.Services
 
                 await SaveAsync(JS);
             }
+
+            await LoadTagsAsync(http, JS);
 
             ApplyFilter();
         }

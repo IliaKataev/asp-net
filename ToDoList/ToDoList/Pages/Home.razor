@@ -1,7 +1,70 @@
 ﻿@page "/"
+@using ToDoList.Services
+@inject TaskService TaskService
+
+
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
-Welcome to your new app.
+<button @onclick="SaveAsTextFile">
+    TXT
+</button>
+
+<button @onclick="SaveAsJsonFile">
+    JSON
+</button>
+
+<button @onclick="SaveAsExcelFile">
+    XLSX
+</button>
+
+@code{
+
+    [Inject] public IJSRuntime JS { get; set; }
+
+    private async Task SaveAsTextFile()
+    {
+        var tasks = TaskService.AllTasks;
+        if(tasks == null || !tasks.Any())
+        {
+            return;
+        }
+
+        var lines = tasks.Select(t =>
+        $"Название: {t.Title}\n" +
+
+        $"Категория: {t.Tag?.Name ?? "нет"}\n" +
+        $"Приоритет: {t.Priority}\n\n");
+
+        var content = string.Join("\n", lines);
+        await JS.InvokeVoidAsync("saveTextFile", content, "tasksTXT.txt");
+    }
+
+    private async Task SaveAsJsonFile()
+    {
+        var tasks = TaskService.AllTasks;
+        if(tasks == null || !tasks.Any())
+        {
+            return;
+        }
+        var json = System.Text.Json.JsonSerializer.Serialize(tasks, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+
+        await JS.InvokeVoidAsync("saveJsonFile", json, "tasksJSON.json");
+    }
+
+    private async Task SaveAsExcelFile()
+    {
+        var tasks = TaskService.AllTasks.Select(t => new
+        {
+            t.Title,
+            Tag = t.Tag?.Name ?? "",
+            Priority = t.Priority.ToString()
+        });
+
+        var json = System.Text.Json.JsonSerializer.Serialize(tasks);
+
+        await JS.InvokeVoidAsync("saveAsExcel", json, "tasks.xlsx");
+    }
+}

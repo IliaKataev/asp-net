@@ -53,15 +53,18 @@
 
 @if (showTagPopup)
 {
-    <div class="fixed inset-0 bg-black bg-opacity-50 flex-column align-items-center justify-content-center blazor-error-boundary z-50">
-        <div class="bg-white rounded-2 shadow-lg p-5 w-[300px]">
+    <div class="modal-fullscreen-overlay">
+        <div class="modal-fullscreen-content">
             <h3 class="text-lg-center mb-2">Новый тег</h3>
-            <input type="text" @bind="newTagName" class="border rounded modal-fullscreen-lg-down mb-2 p-1" placeholder="Название" />
-            <input type="color" @bind="newTagColor" class="modal-fullscreen-lg-down h-10 mb-2 cursor-pointer" />
+            <div class="d-flex   flex-column gap-2">
+                <input type="color" @bind="newTagColor" class="modal-fullscreen-lg-down h-10 mb-2 cursor-pointer color-picker"/>
+                <input type="text" @bind="newTagName" class="border rounded modal-fullscreen-lg-down mb-2 p-1" placeholder="Название" />
+            </div>
+            
 
             <div>
-                <button class="px-3 py-1 bg-gray-300 rounded" @onclick="() => showTagPopup = false">Отмена</button>
-                <button class="px-3 py-1 bg-blue-500 text-white rounded" @onclick="AddTag">Добавить</button>
+                <button class="px-3 py-1 rounded button-task-list bg-black" @onclick="() => showTagPopup = false">Отмена</button>
+                <button class="px-3 py-1 rounded button-task-list bg-black" @onclick="AddTag">Добавить</button>
             </div>
         </div>
     </div>
@@ -79,13 +82,9 @@
     private bool showTagPopup = false;
     private string newTagName = "";
     private string newTagColor = "#8d7c55";
+    private List<Tag> AllTags => TaskService.AllTags;
 
-    private List<Tag> AllTags = new()
-    {
-        new Tag { Name = "Работа", Color = "blue"},
-        new Tag { Name = "Личное", Color = "purple"},
-        new Tag { Name = "Учеба", Color = "green"}
-    };
+    
 
     //private Tag SelectedTag => AllTags.FirstOrDefault(t => t.Id == SelectedTagId);
 
@@ -108,18 +107,19 @@
         newTagName = "";
     }
 
-    private void AddTag()
+    private async Task AddTag()
     {
         if (!string.IsNullOrWhiteSpace(newTagName))
         {
-            var tag = new Tag { Id = Guid.NewGuid(), Name = newTagName.Trim(), Color = newTagColor };
+            var newTag = new Tag { Id = Guid.NewGuid(), Name = newTagName.Trim(), Color = newTagColor };
+            TaskService.AddTag(newTag);
+            SelectedTagId = newTag.Id;
 
-            if(!AllTags.Any(t => t.Name.Equals(tag.Name, StringComparison.OrdinalIgnoreCase)))
-            {
-                AllTags.Add(tag);
-                SelectedTagId = tag.Id;
-            }
+            await TaskService.SaveTagsAsync(JS);
+
             showTagPopup = false;
         }
     }
+
+   
 }
