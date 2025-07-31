@@ -59,11 +59,21 @@ else
         {
             <li class="task-item" style="color:@GetPriorityColor(task.Priority);">
                 <div class="main-text">
-                    <div>
+                    <div class="item-text">
                         <span style="text-decoration:@(task.IsCompleted ? "line-through" : "none")"><strong>@task.Title</strong> -  @task.DueDate.ToShortDateString()</span>
                     </div>
-                    <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()" />
+                    
+                    <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()" class="item-check"/>
+                    
                 </div>
+                @if (task.Tag != null)
+                {
+                    <label>
+                        <span style="color:@task.Tag.Color;" class="item-tag">
+                            @task.Tag.Name
+                        </span>
+                    </label>
+                }
                <div class="main-buttons">
                     <a class="btn btn-secondary button-task-list" href="/task/@task.Id">Подробнее</a>
                     <a class="btn btn-secondary button-task-list" href="/edit-task/@task.Id">Редактировать</a>
@@ -76,46 +86,17 @@ else
 
 
 @code {
-
-    // private void OnFilterChanged()
-    // {
-    //     ApplyFilters();
-    // }
-
-
     private string searchQuery = "";
 
-    // private string selectedFilter
-    // {
-    //     get => _selectedFilter;
-    //     set
-    //     {
-    //         if(_selectedFilter != value)
-    //         {
-    //             _selectedFilter = value;
-    //             TaskService.ApplyFilter();
-    //         }
-    //     }
-    // }
 
     private string selectedFilter = "";
-    // private Dictionary<string, string> Filters = new()
-    //     {
-    //         ["Priority"] = "",
-    //         ["Status"] = "",
-    //         ["Data"] = null,
-    //     };
+
 
     [Inject]
     private TaskService TaskService { get; set; }
 
     [Inject] private HttpClient Http { get; set; }
 
-    // private void ApplyFilters()
-    // {
-    //     var statuc = Filters["Status"];
-    //     TaskService.SetStatusFilter(statuc);
-    // }
 
     protected override async Task OnInitializedAsync()
     {

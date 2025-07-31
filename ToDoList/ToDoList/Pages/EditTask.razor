@@ -34,12 +34,24 @@ else
                     }
                 </InputSelect>
             </div>
+            <div class="task-item">
+                <label>Категория</label>
+                <InputSelect @bind-Value="taskToEdit.Tag" class="form-select">
+                    <option value="">Выберите:</option>
+                    <option value="Работа">Работа</option>
+                    <option value="Учеба">Учеба</option>
+                    <option value="Личное">Личное</option>
+                </InputSelect>
+                <!--button type="button" class="button-task-list" @onclick="">Добавить тег</button-->
+            </div>
 
             <button class="button-task-list" type="submit">Сохранить задачу</button>
             <a class="btn btn-primary button-task-list" style="background-color: #3B3B1A;" href="/tasks">Отмена</a>
         </div>
         
     </EditForm>
+
+    
 }
 
 @code {
@@ -50,6 +62,8 @@ else
     [Inject]
     private HttpClient http { get; set; }
     private TaskModel taskToEdit;
+
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -64,4 +78,5 @@ else
 
         NV.NavigateTo("/tasks");
     }
+
 }

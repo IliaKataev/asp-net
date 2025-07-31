@@ -65,11 +65,22 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+    gap: 20px;
+}
+
+.item-text{
+
+}
+
+.item-tag {
+    padding: 1px 1px;
+
 }
 
 .main-buttons {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 15px;
 }
 

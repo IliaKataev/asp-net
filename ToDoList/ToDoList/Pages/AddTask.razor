@@ -5,6 +5,8 @@
 @using ToDoList.Services
 <h3 class="add-header">AddTask</h3>
 
+
+
 <EditForm Model="@newerTask" OnValidSubmit="HandleValidInput" >
     <DataAnnotationsValidator />
     <div id="add-form">
@@ -30,14 +32,40 @@
             </InputSelect>
             <ValidationMessage For="@(() => newerTask.Priority)" />
         </div>
+        <div class="task-item">
+            <label>Категория</label>
+            <InputSelect @bind-Value="SelectedTagId" class="form-select">
+                <option value="">Выберите:</option>
+                @foreach (var tag in AllTags)
+                {
+                    <option value="@tag.Id">@tag.Name</option>
+                }
+            </InputSelect>
+        </div>
         <div class="link-and-button">
             <a class="go-back-link" href="/tasks"></a>
             <button class="button-task-list" type="submit">Сохранить задачу</button>
         </div>
-        
+        <button type="button" class="button-task-list" @onclick="ShowTagPopup">Добавить тег</button>
     </div>
     
 </EditForm>
+
+@if (showTagPopup)
+{
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex-column align-items-center justify-content-center blazor-error-boundary z-50">
+        <div class="bg-white rounded-2 shadow-lg p-5 w-[300px]">
+            <h3 class="text-lg-center mb-2">Новый тег</h3>
+            <input type="text" @bind="newTagName" class="border rounded modal-fullscreen-lg-down mb-2 p-1" placeholder="Название" />
+            <input type="color" @bind="newTagColor" class="modal-fullscreen-lg-down h-10 mb-2 cursor-pointer" />
+
+            <div>
+                <button class="px-3 py-1 bg-gray-300 rounded" @onclick="() => showTagPopup = false">Отмена</button>
+                <button class="px-3 py-1 bg-blue-500 text-white rounded" @onclick="AddTag">Добавить</button>
+            </div>
+        </div>
+    </div>
+}
 
 
 
@@ -45,13 +73,53 @@
 @code {
     [Inject]
     private TaskService TaskService { get; set; }
+
     TaskModel newerTask = new();
+    private Guid SelectedTagId;
+    private bool showTagPopup = false;
+    private string newTagName = "";
+    private string newTagColor = "#8d7c55";
+
+    private List<Tag> AllTags = new()
+    {
+        new Tag { Name = "Работа", Color = "blue"},
+        new Tag { Name = "Личное", Color = "purple"},
+        new Tag { Name = "Учеба", Color = "green"}
+    };
+
+    //private Tag SelectedTag => AllTags.FirstOrDefault(t => t.Id == SelectedTagId);
+
+
     async Task HandleValidInput()
     {
+        newerTask.Tag = AllTags.FirstOrDefault(t => t.Id == SelectedTagId);
         TaskService.AddTask(newerTask);
 
-        TaskService.SaveAsync(JS);
+        await TaskService.SaveAsync(JS);
 
         Navigation.NavigateTo("/tasks");
+    }
+
+
+    private void ShowTagPopup()
+    {
+        showTagPopup = true;
+        newTagColor = "#8d7c55";
+        newTagName = "";
+    }
+
+    private void AddTag()
+    {
+        if (!string.IsNullOrWhiteSpace(newTagName))
+        {
+            var tag = new Tag { Id = Guid.NewGuid(), Name = newTagName.Trim(), Color = newTagColor };
+
+            if(!AllTags.Any(t => t.Name.Equals(tag.Name, StringComparison.OrdinalIgnoreCase)))
+            {
+                AllTags.Add(tag);
+                SelectedTagId = tag.Id;
+            }
+            showTagPopup = false;
+        }
     }
 }

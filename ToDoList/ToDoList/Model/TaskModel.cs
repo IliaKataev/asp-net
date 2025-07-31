@@ -27,5 +27,7 @@ namespace ToDoList.Model
         public TaskPriority Priority { get; set; } = TaskPriority.Low;
 
         public bool IsCompleted { get; set; } = false;
+
+        public Tag Tag { get; set; }
     }
 }

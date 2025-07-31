@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using ToDoList.Pages;
 using ToDoList.Services;
+using BlazorStrap;
 
 namespace ToDoList
 {
