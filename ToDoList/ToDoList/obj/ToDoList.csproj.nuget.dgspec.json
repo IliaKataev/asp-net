@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\asp net\\ToDoList\\ToDoList\\ToDoList.csproj": {}
+    "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\ToDoList.csproj": {}
   },
   "projects": {
-    "D:\\asp net\\ToDoList\\ToDoList\\ToDoList.csproj": {
+    "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\ToDoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\asp net\\ToDoList\\ToDoList\\ToDoList.csproj",
+        "projectUniqueName": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\ToDoList.csproj",
         "projectName": "ToDoList",
-        "projectPath": "D:\\asp net\\ToDoList\\ToDoList\\ToDoList.csproj",
+        "projectPath": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\ToDoList.csproj",
         "packagesPath": "C:\\Users\\artgl\\.nuget\\packages\\",
-        "outputPath": "D:\\asp net\\ToDoList\\ToDoList\\obj\\",
+        "outputPath": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\VS\\AllOther\\NuGetPackages"
+          "D:\\Programs\\Visual Studio Packages\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\artgl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -66,13 +66,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.16, )",
+              "version": "[8.0.15, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.5, )",
+              "version": "[9.0.4, )",
               "autoReferenced": true
             }
           },
@@ -90,7 +90,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.16, 8.0.16]"
+              "version": "[8.0.15, 8.0.15]"
             }
           ],
           "frameworkReferences": {
@@ -98,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

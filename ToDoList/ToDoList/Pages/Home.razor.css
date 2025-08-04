@@ -1,0 +1,38 @@
+﻿body {
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.export-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 24px 0;
+}
+
+.btn-primary {
+    background-color: #8A784E;
+    color: #E7EFC7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #3B3B1A;
+        color: #E7EFC7;
+    }
+
+.tag-item{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+}

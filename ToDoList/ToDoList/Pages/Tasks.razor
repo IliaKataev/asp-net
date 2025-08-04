@@ -62,9 +62,9 @@ else
                     <div class="item-text">
                         <span style="text-decoration:@(task.IsCompleted ? "line-through" : "none")"><strong>@task.Title</strong> -  @task.DueDate.ToShortDateString()</span>
                     </div>
-                    
+
                     <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()" class="item-check"/>
-                    
+
                 </div>
                 @if (task.Tag != null)
                 {
@@ -74,11 +74,11 @@ else
                         </span>
                     </label>
                 }
-               <div class="main-buttons">
+                <div class="main-buttons">
                     <a class="btn btn-secondary button-task-list" href="/task/@task.Id">Подробнее</a>
                     <a class="btn btn-secondary button-task-list" href="/edit-task/@task.Id">Редактировать</a>
                     <button class="btn btn-secondary button-task-list" @onclick="() => DeleteTask(task.Id)">Удалить</button>
-               </div>                
+                </div>                
             </li>
         }
     </ul>
@@ -100,6 +100,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+       
         await TaskService.LoadAsync(Http, JS);
     }
 

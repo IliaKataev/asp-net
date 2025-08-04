@@ -1,28 +1,105 @@
 ﻿@page "/"
 @using ToDoList.Services
 @inject TaskService TaskService
+@using ToDoList.Model
 
 
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
 
-<button @onclick="SaveAsTextFile">
-    TXT
-</button>
 
-<button @onclick="SaveAsJsonFile">
-    JSON
-</button>
+<h1>Что у тебя на уме? <strong>@(topTag ?? "Работа")</strong></h1>
 
-<button @onclick="SaveAsExcelFile">
-    XLSX
-</button>
+
+
+@if(tasksStat != null)
+{
+    <div>
+        <h2 class="font-bold mb-4 text-center">Статистика</h2>
+
+        <div class="parent">
+            <div class="p-4 shadow rounded bg-white">
+                <h4 class="font-semibold">Всего задач</h4>
+                <p>@tasksStat.Count();</p>
+            </div>
+            <div class="p-4 shadow rounded bg-white">
+                <h4 class="font-semibold">Выполненные</h4>
+                <p>@tasksStat.Count(t => t.IsCompleted)</p>
+            </div>
+            <div class="p-4 shadow rounded bg-white">
+                <h4 class="font-semibold">Осталось</h4>
+                <p>@tasksStat.Count(t => !t.IsCompleted)</p>
+            </div>
+           
+            <div class="p-4 shadow rounded bg-white">
+                <h4 class="font-semibold">Важные дела</h4>
+                <p>@tasksStat.Count(t => t.Priority == TaskPriority.High)</p>
+            </div>
+        </div>
+             <div class="p-4 shadow mt-4 rounded bg-white">
+                    <h3 class="font-semibold text-center ">Теги</h3>
+                    @if (allTags.Any())
+                    {
+                        <div>
+                             <ul class="parent tag-item">
+                                @foreach (var tag in allTags)
+                                {
+                                    <li class="p-4 shadow rounded tag-item"><p class="text-center" style="padding: 0; margin: 0;">@tag</p></li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+    </div>
+}
+else
+{
+    <p>Сбор данных</p>
+}
+
+<div class="export-buttons">
+    <button class="btn-primary" @onclick="SaveAsTextFile">
+        TXT
+    </button>
+
+    <button class="btn-primary"  @onclick="SaveAsJsonFile">
+        JSON
+    </button>
+
+    <button class="btn-primary"  @onclick="SaveAsExcelFile">
+        XLSX
+    </button>
+</div>
+
+
+
 
 @code{
 
     [Inject] public IJSRuntime JS { get; set; }
+    private string? topTag;
+    private List<string> allTags = new();
+
+
+    private IEnumerable<TaskModel> tasksStat;
+
+    protected override void OnInitialized()
+    {
+        tasksStat = TaskService.AllTasks;
+
+        allTags = tasksStat
+        .Where(t => t.Tag != null)
+        .Select(t => t.Tag.Name)
+        .Distinct()
+        .ToList();
+
+        topTag = tasksStat.Where(t => t.Tag != null)
+        .GroupBy(t => t.Tag.Name)
+        .OrderByDescending(t => t.Count())
+        .Select(t => t.Key)
+        .FirstOrDefault();
+    }
 
     private async Task SaveAsTextFile()
     {
