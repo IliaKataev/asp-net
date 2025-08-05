@@ -20,6 +20,7 @@ namespace ToDoList.Services
         private string priorityFilter = "";
         private DateTime? dateFilter = null;
         private string searchQuery = "";
+        private HttpClient http { get; set; }
         /// <summary>
         
         public async Task SaveTagsAsync(IJSRuntime JS)

@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using ToDoList.Services
 @inject TaskService TaskService
+@inject HttpClient http
 @using ToDoList.Model
 
 
@@ -31,26 +32,26 @@
                 <h4 class="font-semibold">Осталось</h4>
                 <p>@tasksStat.Count(t => !t.IsCompleted)</p>
             </div>
-           
+
             <div class="p-4 shadow rounded bg-white">
                 <h4 class="font-semibold">Важные дела</h4>
                 <p>@tasksStat.Count(t => t.Priority == TaskPriority.High)</p>
             </div>
         </div>
-             <div class="p-4 shadow mt-4 rounded bg-white">
-                    <h3 class="font-semibold text-center ">Теги</h3>
-                    @if (allTags.Any())
-                    {
-                        <div>
-                             <ul class="parent tag-item">
-                                @foreach (var tag in allTags)
-                                {
-                                    <li class="p-4 shadow rounded tag-item"><p class="text-center" style="padding: 0; margin: 0;">@tag</p></li>
-                                }
-                            </ul>
-                        </div>
-                    }
+        <div class="p-4 shadow mt-4 rounded bg-white">
+            <h3 class="font-semibold text-center ">Теги</h3>
+            @if (allTags.Any())
+            {
+                <div>
+                    <ul class="parent tag-item">
+                        @foreach (var tag in allTags)
+                        {
+                            <li class="p-4 shadow rounded tag-item"><p class="text-center" style="padding: 0; margin: 0;">@tag</p></li>
+                        }
+                    </ul>
                 </div>
+            }
+        </div>
     </div>
 }
 else
@@ -84,8 +85,9 @@ else
 
     private IEnumerable<TaskModel> tasksStat;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
+        await TaskService.LoadAsync(http, JS);
         tasksStat = TaskService.AllTasks;
 
         allTags = tasksStat

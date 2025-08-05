@@ -121,6 +121,11 @@ select {
     border-radius: 10px;
 }
 
-select::picker(select) {
-    border: none;
+.color-circle{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    
 }

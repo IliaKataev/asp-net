@@ -59,19 +59,33 @@ else
         {
             <li class="task-item" style="color:@GetPriorityColor(task.Priority);">
                 <div class="main-text">
-                    <div class="item-text">
-                        <span style="text-decoration:@(task.IsCompleted ? "line-through" : "none")"><strong>@task.Title</strong> -  @task.DueDate.ToShortDateString()</span>
-                    </div>
+                    <div class="item-text" @ondblclick="() => StartEditing(task)">
 
-                    <InputCheckbox @bind-Value="task.IsCompleted" @onchange="() => SaveTasksAsync()" class="item-check"/>
+                        @if (editTask == task.Id)
+                        {
+                            <input @bind="@editingTitles[task.Id]" @onkeydown="(e) => HandleKeyDown(e, task)"/>
+                                        <p>@editingTitles[task.Id]</p>
+                        }
+                        else
+                        {           
+                            <span style="text-decoration:@(task.IsCompleted ? "line-through" : "none")">
+                                <strong>
+                                    @task.Title
+                                </strong> 
+                                -  @task.DueDate.ToShortDateString()
+                            </span>
+                        }
+                    </div>
+                    <input type="checkbox" value="@task.IsCompleted" @onchange="() => ChangeStatus(task)" class="item-check"/>
 
                 </div>
                 @if (task.Tag != null)
                 {
-                    <label>
-                        <span style="color:@task.Tag.Color;" class="item-tag">
-                            @task.Tag.Name
+                    <label style="color:@task.Tag.Color;">
+                        <span style="background-color:@task.Tag.Color;" class="color-circle">
+
                         </span>
+                        @task.Tag.Name
                     </label>
                 }
                 <div class="main-buttons">
@@ -91,6 +105,12 @@ else
 
     private string selectedFilter = "";
 
+    private Guid? editTask = null;
+    private Dictionary<Guid, string> editingTitles = new();
+
+
+    [Parameter]
+    public EventCallback<TaskModel> OnTaskUpdated { get; set; }
 
     [Inject]
     private TaskService TaskService { get; set; }
@@ -100,7 +120,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-       
+
         await TaskService.LoadAsync(Http, JS);
     }
 
@@ -109,10 +129,37 @@ else
         await TaskService.SaveAsync(JS);
     }
 
+    public async Task ChangeStatus(TaskModel task)
+    {
+        task.IsCompleted = !task.IsCompleted;
+        await SaveTasksAsync();
+
+    }
+
     private async Task DeleteTask(Guid id)
     {
         TaskService.DeleteAsync(id);
         await TaskService.SaveAsync(JS);
+    }
+
+    void StartEditing(TaskModel task)
+    {
+        editTask = task.Id;
+        editingTitles[task.Id] = task.Title;
+    }
+
+    async Task HandleKeyDown(KeyboardEventArgs e, TaskModel task)
+    {
+        if (e.Key == "Enter")
+        {
+            Console.WriteLine($"До обновления: {task.Title}");
+            task.Title = editingTitles[task.Id];
+            Console.WriteLine($"После обновления: {task.Title}");
+            await SaveTasksAsync();
+            Console.WriteLine($"Сохранение было вызвано");
+            editTask = null;
+
+        }
     }
 
 
