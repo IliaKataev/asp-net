@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\studying\\asp-nte\\asp-net\\todolist\\todolist\\pages\\taskdetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\pages\\taskdetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\studying\\asp-nte\\asp-net\\todolist\\todolist\\wwwroot\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\wwwroot\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\studying\\asp-nte\\asp-net\\todolist\\todolist\\pages\\tasks.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\pages\\tasks.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\studying\\asp-nte\\asp-net\\todolist\\todolist\\pages\\taskdetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\pages\\taskdetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4533113B-E44C-4E7A-ACB9-9927C3C1DF24}|ToDoList\\ToDoList.csproj|d:\\studying\\asp-nte\\asp-net\\todolist\\todolist\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -62,17 +62,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TextFile.txt",
               "DocumentMoniker": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\wwwroot\\TextFile.txt",
               "RelativeDocumentMoniker": "ToDoList\\wwwroot\\TextFile.txt",
               "ToolTip": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\wwwroot\\TextFile.txt",
               "RelativeToolTip": "ToDoList\\wwwroot\\TextFile.txt",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAC4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-07-16T16:00:56.622Z",
               "IsPinned": true,
@@ -96,8 +96,7 @@
               "RelativeToolTip": "ToDoList\\Layout\\MainLayout.razor.css",
               "ViewState": "AgIAACYAAAAAAAAAAAAIwC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-05T15:35:31.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T15:35:31.926Z"
             },
             {
               "$type": "Document",
@@ -109,18 +108,17 @@
               "RelativeToolTip": "ToDoList\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-05T15:35:23.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T15:35:23.735Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TaskDetail.razor",
               "DocumentMoniker": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\Pages\\TaskDetail.razor",
               "RelativeDocumentMoniker": "ToDoList\\Pages\\TaskDetail.razor",
               "ToolTip": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\Pages\\TaskDetail.razor",
               "RelativeToolTip": "ToDoList\\Pages\\TaskDetail.razor",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAowBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-05T13:52:35.964Z",
               "EditorCaption": ""
@@ -151,13 +149,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Tasks.razor",
               "DocumentMoniker": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\Pages\\Tasks.razor",
               "RelativeDocumentMoniker": "ToDoList\\Pages\\Tasks.razor",
               "ToolTip": "D:\\studying\\asp-nte\\asp-net\\ToDoList\\ToDoList\\Pages\\Tasks.razor",
               "RelativeToolTip": "ToDoList\\Pages\\Tasks.razor",
-              "ViewState": "AgIAADcAAAAAAAAAAAAuwEUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAuwEYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-04T15:40:21.792Z",
               "EditorCaption": ""
@@ -172,8 +170,7 @@
               "RelativeToolTip": "ToDoList\\Pages\\Home.razor",
               "ViewState": "AgIAAHwAAAAAAAAAAAAIwJEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-04T14:11:08.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T14:11:08.461Z"
             },
             {
               "$type": "Document",
@@ -209,8 +206,7 @@
               "RelativeToolTip": "ToDoList\\Pages\\Home.razor.css",
               "ViewState": "AgIAABUAAAAAAAAAAAAIwB0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-04T15:13:19.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T15:13:19.316Z"
             },
             {
               "$type": "Document",
@@ -222,8 +218,7 @@
               "RelativeToolTip": "ToDoList\\Services\\TaskService.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAwwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T16:15:39.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T16:15:39.873Z"
             },
             {
               "$type": "Document",
@@ -235,8 +230,7 @@
               "RelativeToolTip": "ToDoList\\Pages\\Tasks.razor.css",
               "ViewState": "AgIAAHcAAAAAAAAAAAAAAIEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-04T15:40:27.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-04T15:40:27.634Z"
             }
           ]
         }

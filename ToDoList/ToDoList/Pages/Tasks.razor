@@ -63,8 +63,8 @@ else
 
                         @if (editTask == task.Id)
                         {
-                            <input @bind="@editingTitles[task.Id]" @onkeydown="(e) => HandleKeyDown(e, task)"/>
-                                        <p>@editingTitles[task.Id]</p>
+                            <input @bind="@editingTitles[task.Id]" @bind:event="oninput" @onkeydown="(e) => HandleKeyDown(e, task)"/>
+                            <p>@editingTitles[task.Id]</p>
                         }
                         else
                         {           
@@ -101,6 +101,7 @@ else
 
 @code {
     private string searchQuery = "";
+    private bool showValidator = false;
 
 
     private string selectedFilter = "";
@@ -108,9 +109,6 @@ else
     private Guid? editTask = null;
     private Dictionary<Guid, string> editingTitles = new();
 
-
-    [Parameter]
-    public EventCallback<TaskModel> OnTaskUpdated { get; set; }
 
     [Inject]
     private TaskService TaskService { get; set; }
@@ -158,6 +156,7 @@ else
             await SaveTasksAsync();
             Console.WriteLine($"Сохранение было вызвано");
             editTask = null;
+            StateHasChanged();
 
         }
     }
